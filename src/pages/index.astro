@@ -1,7 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Background1 from '../components/Background1.astro';
 ---
 
-<Layout title="Portafolio Daniel Amado">
-	<h1>Hello en español</h1>
+<Layout title="Portafolio Daniel Amado" lang="es">
+	<Background1 />
+	<Header />
+	<main class="max-w-screen-xl mx-auto">
+		<Hero />
+	</main>
 </Layout>
