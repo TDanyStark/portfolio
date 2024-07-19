@@ -1,0 +1,62 @@
+---
+import Parrafo from "./Parrafo.astro";
+import Ribbow from "./Ribbow.astro";
+import Titulo from "./Titulo.astro";
+---
+
+<section class="py-24">
+  <div class="blur-3xl absolute pointer-events-none">
+    <div
+      class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+    >
+    </div>
+  </div>
+  <div class="max-w-[900px] mx-auto">
+    <div class="flex gap-8">
+      <div
+        class="basis-2/5 card relative aspect-custom border-2 border-slate-700 rounded-3xl overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 w-full h-full"
+          style="background-image: url('img/Team-01.jpg'); background-size: cover; background-position: center;"
+        >
+        </div>
+        <div class="absolute inset-0 w-full h-full p-6 flex">
+          <div class="mt-auto">
+            <h3
+              class="inline-block bg-slate-100 text-black font-bold px-2 text-xl"
+            >
+              Daniel Amado
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col items-start justify-center basis-3/5 space-y-8">
+        <div>
+          <Ribbow>Acerca de mi</Ribbow>
+          <Titulo titulo="¿Quien es" resaltar="Daniel?" />
+        </div>
+        <Parrafo>
+          Soy un desarrollador Fullstack con más de 5 años de experiencia en el
+          desarrollo de aplicaciones web y móviles. Me apasiona la tecnología y
+          la programación, siempre estoy en constante aprendizaje y
+          actualización de nuevas tecnologías.
+        </Parrafo>
+        <Parrafo>
+          Soy un desarrollador Fullstack con más de 5 años de experiencia en el
+          desarrollo de aplicaciones web y móviles. Me apasiona la tecnología y
+          la programación, siempre estoy en constante aprendizaje y
+          actualización de nuevas tecnologías.
+        </Parrafo>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .aspect-custom {
+    aspect-ratio: 3/4;
+    width: 300px;
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  url: string;
+  title: string;
+}
+
+const { url, title } = Astro.props;
+---
+
+<a href="#" class="rounded-full py-1 px-3 transition-all border border-white text-white hover:text-gray-900 hover:bg-zinc-100">
+  <div
+    class="text-lg w-full text-center flex items-center"
+  >
+    <slot />
+    {title}
+  </div>
+</a>

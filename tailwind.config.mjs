@@ -6,6 +6,13 @@ export default {
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
 			},
+			backgroundImage: {
+        'custom-radial': 'radial-gradient(at center center, #008AFC00 30%, #008AFC61 100%)',
+      },
+			colors:{
+				'azul-cielo': '#119CFF',
+				'azul-claro': '#97F8F4',
+			}
 		},
 	},
 	plugins: [],

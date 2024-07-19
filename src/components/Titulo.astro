@@ -1,0 +1,16 @@
+---
+interface Props {
+  titulo: string;
+  resaltar: string;
+}
+
+const { titulo, resaltar } = Astro.props;
+---
+
+<h2 class="text-3xl md:text-5xl text-center font-semibold">
+  {titulo}
+  <span
+    class="bg-gradient-to-r from-azul-cielo to-azul-claro inline-block text-transparent bg-clip-text font-bold">
+    {resaltar}
+  </span>
+</h2>
