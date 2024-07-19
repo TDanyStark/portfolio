@@ -4,7 +4,7 @@ import Ribbow from "./Ribbow.astro";
 import Titulo from "./Titulo.astro";
 ---
 
-<section class="py-24">
+<section id="about" class="py-24">
   <div class="blur-3xl absolute pointer-events-none">
     <div
       class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
@@ -12,7 +12,7 @@ import Titulo from "./Titulo.astro";
     >
     </div>
   </div>
-  <div class="max-w-[900px] mx-auto">
+  <div class="max-w-[900px] mx-auto blur-xl about">
     <div class="flex gap-8">
       <div
         class="basis-2/5 card relative aspect-custom border-2 border-slate-700 rounded-3xl overflow-hidden"
@@ -58,5 +58,17 @@ import Titulo from "./Titulo.astro";
   .aspect-custom {
     aspect-ratio: 3/4;
     width: 300px;
+  }
+
+  @keyframes on-scroll-blur {
+    to{
+      filter: blur(0);
+    }
+  }
+
+  .about {
+    animation: on-scroll-blur linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0% 200px;
   }
 </style>
