@@ -7,10 +7,13 @@ interface Props {
 const { url, title } = Astro.props;
 ---
 
-<a href="#" class="rounded-full py-1 px-3 transition-all border border-white text-white hover:text-gray-900 hover:bg-zinc-100">
-  <div
-    class="text-lg w-full text-center flex items-center"
-  >
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="rounded-full py-1 px-3 transition-all border border-white text-white hover:text-gray-900 hover:bg-zinc-100"
+>
+  <div class="text-lg w-full text-center flex items-center">
     <slot />
     {title}
   </div>

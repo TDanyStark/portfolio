@@ -11,5 +11,6 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  base: "/dist",
 });
