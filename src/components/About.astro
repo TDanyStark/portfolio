@@ -4,18 +4,18 @@ import Ribbow from "./Ribbow.astro";
 import Titulo from "./Titulo.astro";
 ---
 
-<section id="about" class="py-24">
-  <!-- <div class="blur-3xl relative  pointer-events-none">
+<section id="about" class="py-36 lg:py-72">
+  <div class="blur-3xl relative pointer-events-none">
     <div
       class="absolute left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
       style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
     >
     </div>
-  </div> -->
+  </div>
   <div class="max-w-[900px] mx-auto" id="about-info">
     <div class="flex flex-col lg:flex-row gap-8">
       <div
-        class="basis-2/5 card relative aspect-custom border-2 border-slate-700 rounded-3xl overflow-hidden"
+        class="min-w-64 card relative aspect-custom border-2 border-slate-700 rounded-3xl overflow-hidden"
       >
         <div
           class="absolute inset-0 w-full h-full"
@@ -32,49 +32,70 @@ import Titulo from "./Titulo.astro";
           </div>
         </div>
       </div>
-      <div class="flex flex-col items-start justify-center basis-3/5 space-y-8">
+      <div class="flex flex-col items-start justify-center space-y-8">
         <div>
           <Ribbow>Acerca de mi</Ribbow>
-          <Titulo titulo="¿Quien es" resaltar="Daniel?" />
+          <Titulo titulo="¿Quién es" resaltar="Daniel?" />
         </div>
         <Parrafo>
-          Soy un desarrollador Fullstack con más de 5 años de experiencia en el
-          desarrollo de aplicaciones web y móviles. Me apasiona la tecnología y
-          la programación, siempre estoy en constante aprendizaje y
-          actualización de nuevas tecnologías.
-        </Parrafo>
-        <Parrafo>
-          Soy un desarrollador Fullstack con más de 5 años de experiencia en el
-          desarrollo de aplicaciones web y móviles. Me apasiona la tecnología y
-          la programación, siempre estoy en constante aprendizaje y
-          actualización de nuevas tecnologías.
+          Un apasionado por la tecnología y siempre al día con las últimas
+          tendencias. Me encanta resolver problemas y encontrar soluciones
+          creativas. Tengo <strong>1 año de experiencia como docente</strong> y <strong
+            >2 años en el sector IT y de programación</strong
+          >, donde he podido interactuar en todas las etapas de un desarrollo
+          web, desde el <strong>frontend, que es mi pasión</strong>, hasta el
+          backend y el despliegue. Siempre busco <strong
+            >automatizar procesos a través de la programación</strong
+          >, optimizando operaciones y mejorando la productividad. Me encanta <strong
+            >colaborar y aprender continuamente</strong
+          >, enfrentando desafíos que me permitan aplicar y expandir mis
+          habilidades para impulsar la <strong
+            >eficiencia y el rendimiento</strong
+          > en cada proyecto que emprendo.
         </Parrafo>
       </div>
     </div>
   </div>
 </section>
 
-
-<style is:global>
+<style>
   .aspect-custom {
     aspect-ratio: 3/4;
     width: 300px;
   }
 
-  #about #about-info {
+  /* #about #about-info {
     animation: reveal linear both;
     animation-timeline: scroll(root);
     animation-range: 0% 150px;
   }
-
 
   @keyframes reveal {
     from {
       filter: blur(20px);
     }
 
-    to{
+    to {
       filter: blur(0);
+    }
+  } */
+
+  #about-info {
+    view-timeline-name: --reveal;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+  }
+
+  @keyframes show {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 

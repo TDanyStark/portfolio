@@ -12,5 +12,5 @@ export default defineConfig({
     }
   },
   integrations: [tailwind()],
-  base: "/dist",
+  base: "/",
 });

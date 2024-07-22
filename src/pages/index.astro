@@ -5,56 +5,17 @@ import Hero from "../components/Hero.astro";
 import Background1 from "../components/Background1.astro";
 import About from "../components/About.astro";
 import Lottie from "../components/Lottie.astro";
-import Test from "../components/Test.astro";
 ---
 
 <Layout title="Portafolio Daniel Amado" lang="es">
   <Background1 />
   <Header />
-  <main class="overflow-hidden">
+  <main class="overflow-clip p-3 lg:p-0">
     <div class="max-w-screen-xl mx-auto">
       <Hero />
-      <!-- <Lottie /> -->
+      <Lottie />
       <About />
-			<Test />
     </div>
   </main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const options = {
-        root: null, // Use the viewport as the container
-        rootMargin: "0px",
-        threshold: 0.8, // Trigger when 10% of the element is visible
-      };
-
-      const callback = (
-        entries: IntersectionObserverEntry[],
-        observer: IntersectionObserver
-      ) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("revealed");
-            observer.unobserve(entry.target); // Stop observing once revealed
-          }
-        });
-      };
-
-      const observer = new IntersectionObserver(callback, options);
-
-      const elements = document.querySelectorAll(".reveal");
-      elements.forEach((el) => observer.observe(el));
-    });
-  </script>
-
-  <style is:global>
-    .reveal {
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .reveal.revealed {
-      opacity: 1;
-    }
-  </style>
 </Layout>
