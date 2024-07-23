@@ -2,6 +2,35 @@
 ---
 <div class="max-w-sm mx-auto flex justify-center">
   <a href="#about" class="inline-block">
-    <dotlottie-player src="lottie/scroll.json" background="transparent" speed="1" style="width: 100px; height: 100px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+    <canvas id="dotlottie-canvas" style="width: 100px; height:100px;"></canvas>
   </a>
 </div>
+
+<script>
+  import { DotLottie } from '@lottiefiles/dotlottie-web';
+
+const dotLottie = new DotLottie({
+    autoplay: true,
+    loop: true,
+    canvas: document.querySelector('#dotlottie-canvas') || document.createElement('canvas'),
+    src: "lottie/scroll.lottie", // or .json file
+});
+
+</script>
+
+<style>
+  #dotlottie-canvas{
+    animation: hidden-scroll linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0% 300px;
+  }
+
+  @keyframes hidden-scroll {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
