@@ -2,21 +2,6 @@
 ---
 <div class="max-w-sm mx-auto flex justify-center">
   <a href="#about" class="inline-block">
-    <canvas id="canvas" width="100" height="100"></canvas>
+    <dotlottie-player src="lottie/scroll.json" background="transparent" speed="1" style="width: 100px; height: 100px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
   </a>
 </div>
-
-<script type="module">
-  import { DotLottie } from "../../public/js/lottie.js";
-
-
-  const lottieInstance = new DotLottie({
-    autoplay: true,
-    loop: true,
-    canvas: document.getElementById("canvas"),
-    src: "lottie/scroll.json",
-    speed: 1,
-  });
-
-
-</script>

@@ -14,10 +14,13 @@ const { title, lang } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
+		<script src="/js/lottie/dotlottie-player.mjs" type="module" is:inline></script>
+
 		<title>{title}</title>
 	</head>
 	<body class="bg-gray-900 font-sans text-white min-h-screen scroll-beha">
 		<slot />
+		
 	</body>
 </html>
 <style>
