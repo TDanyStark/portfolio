@@ -1,3 +1,4 @@
+
 ---
 interface Props {
   fontsize?: string;
@@ -7,7 +8,7 @@ const { fontsize = "text-base" } = Astro.props;
 ---
 
 <div
-  class=`w-fit bg-gradient-to-r from-blue-900 to-azul-cielo text-white py-1 px-4 rounded-full mb-4 ${fontsize}`
+  class=`w-fit bg-gradient-to-r from-blue-900 to-azul-cielo text-white py-1 px-4 rounded-full mb-3 ${fontsize}`
 >
   <slot />
 </div>

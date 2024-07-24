@@ -1,0 +1,82 @@
+---
+import Parrafo from "./Parrafo.astro";
+
+export interface Props {
+  experiencia: {
+    cargo: string;
+    empresa: string;
+    fecha: string;
+    descripcion: string;
+    verMas?: string[];
+  };
+}
+
+const { experiencia } = Astro.props;
+---
+
+<div
+  class="experience-item relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group opacity-0"
+>
+  <!-- Icon -->
+  <div
+    class="flex items-center justify-center w-7 h-7 rounded-full bg-blue-900 text-gray-200 shrink-0 md:order-1 md:group-odd:-translate-x-[93%] md:group-even:translate-x-[93%]"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="text-primary w-4 h-4"
+      ><path
+        d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+      ></path><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path><path
+        d="M12 12l0 .01"></path><path d="M3 13a20 20 0 0 0 18 0"></path></svg
+    >
+  </div>
+  <!-- Card -->
+  <div
+    class="card-info-experience w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-gray-800/70 p-4 rounded-lg border border-gray-700/50 hover:border hover:border-azul-cielo transition-[border] focus:border focus:border-azul-cielo group-first:border group-first:border-azul-cielo outline-none"  tabindex="0"
+  >
+    <div class="flex items-center justify-between space-x-2">
+      <div class="text-lg font-semibold text-white">{experiencia.empresa}</div>
+      <time class="text-sm font-medium text-azul-cielo"
+        >{experiencia.fecha}</time
+      >
+    </div>
+    <Parrafo parrafo={experiencia.cargo} size="text-sm" color="text-gray-500" />
+    <div class="mt-3">
+      <Parrafo parrafo={experiencia.descripcion} size="text-base" />
+    </div>
+    {
+      experiencia.verMas && (
+        <div class="mt-2">
+          <a href="#" class="text-azul-cielo hover:underline" >
+            Ver más
+          </a>
+        </div>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  .experience-item{
+    animation: translate-experience linear forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 15%;
+  }
+
+  @keyframes translate-experience {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

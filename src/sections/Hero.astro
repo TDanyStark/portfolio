@@ -1,29 +1,34 @@
 ---
-import BotonPrincipal from "./BotonPrincipal.astro";
-import Botonsegundario from "./Botonsegundario.astro";
-import Ribbow from "./Ribbow.astro";
-import Parrafo from "./Parrafo.astro";
+import type { HeroDataType } from "../types.ts";
+export interface Props {
+  heroData: HeroDataType;
+}
+
+const { heroData } = Astro.props;
+
+import BotonPrincipal from "../components/BotonPrincipal.astro";
+import Botonsegundario from "../components/Botonsegundario.astro";
+import Ribbow from "../components/Ribbow.astro";
+import Parrafo from "../components/Parrafo.astro";
 ---
 
-<section class="py-40">
+<section id="home" class="py-40">
   <div>
     <div class="relative mt-4">
       <div class="flex justify-center">
-        <Ribbow fontsize="text-sm">¡Abierto a nuevas oportunidades!</Ribbow>
+        <Ribbow fontsize="text-sm">{heroData.estado}</Ribbow>
       </div>
       <h1 class="text-5xl md:text-7xl text-center font-semibold">
         👋🏻¡Hola, soy <span
           class="bg-gradient-to-r from-azul-cielo to-azul-claro inline-block text-transparent bg-clip-text font-bold"
-          >Daniel!</span
+          >{heroData.nombre}!</span
         >
       </h1>
-      <div class="text-center">
-        <Parrafo>
-          Desarrollador Fullstack
-        </Parrafo>
+      <div class="text-center mt-4">
+        <Parrafo parrafo={heroData.perfil}/>
       </div>
       <div class="flex justify-center gap-3 md:gap-4 mt-4">
-        <BotonPrincipal url="https://www.linkedin.com/in/danielamadov/" title="LinkedIn">
+        <BotonPrincipal url={heroData.LinkedIn} title="LinkedIn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -42,7 +47,7 @@ import Parrafo from "./Parrafo.astro";
             ></path></svg
           >
         </BotonPrincipal>
-        <BotonPrincipal url="https://github.com/TDanyStark" title="Github">
+        <BotonPrincipal url={heroData.GitHub} title="Github">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -59,7 +64,7 @@ import Parrafo from "./Parrafo.astro";
             ></path></svg
           >
         </BotonPrincipal>
-        <Botonsegundario url="cv/CV_DANIEL_AMADO.pdf" title="CV">
+        <Botonsegundario url={heroData.CV} title="CV">
           <svg
             version="1.0"
             xmlns="http://www.w3.org/2000/svg"
