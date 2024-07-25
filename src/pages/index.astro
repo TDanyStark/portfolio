@@ -5,8 +5,9 @@ import Hero from "../sections/Hero.astro";
 import Background1 from "../components/Background1.astro";
 import About from "../sections/About.astro";
 import Lottie from "../components/Lottie.astro";
-import { HeroData, AboutData, ExperienceData } from "../data/portafolio-es.ts";
-import Experiencia from "../sections/Experiencia.astro";
+import { HeroData, AboutData, ExperienceData, ProjectsData } from "../data/portafolio-es.ts";
+import Experiencia from "../sections/Experience.astro";
+import Projects from "../sections/Projects.astro";
 ---
 
 <Layout title="Portafolio Daniel Amado" lang="es">
@@ -18,7 +19,21 @@ import Experiencia from "../sections/Experiencia.astro";
       <Lottie />
       <About aboutData={AboutData} />
       <Experiencia experienceData={ExperienceData} />
+      <Projects projectsData={ProjectsData} />
     </div>
   </main>
 
 </Layout>
+
+<style is:global>
+  @keyframes translate-up {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

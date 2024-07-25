@@ -7,7 +7,7 @@ export default {
 				'inter': ['Inter', 'sans-serif'],
 			},
 			backgroundImage: {
-        'custom-radial': 'radial-gradient(at center center, #008AFC00 30%, #008AFC61 100%)',
+        'custom-radial-1': 'radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(2,0,36,0) 100%);',
       },
 			colors:{
 				'azul-cielo': '#119CFF',

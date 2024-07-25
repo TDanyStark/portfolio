@@ -26,6 +26,21 @@ export interface ExperienceDataType {
     empresa: string;
     fecha: string;
     descripcion: string;
-    verMas?: string[];
+    verMas?: string;
+  }[];
+}
+
+export interface ProjectsDataType {
+  etiqueta: string;
+  titulo: string;
+  tituloResaltado: string;
+  parrafo: string;
+  proyectos: {
+    img: string;
+    titulo: string;
+    descripcion: string;
+    tecnologias: string[];
+    link?: string;
+    LinkGithub?: string;
   }[];
 }

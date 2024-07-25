@@ -5,7 +5,7 @@ export interface Props {
   color?: string;
 }
 
-const { parrafo, size = "text-lg", color= "text-gray-300" } = Astro.props;
+const { parrafo, size = "text-lg", color= "text-gray-300/90" } = Astro.props;
 ---
 
 <p class={`${size} ${color}  text-pretty`}  set:html={parrafo}></p>

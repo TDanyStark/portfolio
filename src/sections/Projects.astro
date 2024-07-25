@@ -1,0 +1,45 @@
+---
+import type { ProjectsDataType } from "../types.ts";
+export interface Props {
+  projectsData: ProjectsDataType;
+}
+
+const { projectsData } = Astro.props;
+
+import Parrafo from "../components/Parrafo.astro";
+import Ribbow from "../components/Ribbow.astro";
+import Titulo from "../components/Titulo.astro";
+import ItemProject from "../components/ItemProject.astro";
+---
+
+<section id="projects" class="py-36 lg:py-44 relative">
+  <div class="blur-3xl relative -z-10 pointer-events-none">
+    <div
+      class="absolute right-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] translate-x-1/2 rotate-[10deg] bg-custom-radial-1 al-1 opacity-20 sm:right-[calc(50%-30rem)] sm:w-[60rem]"
+    >
+    </div>
+  </div>
+  <div>
+    <div class="flex flex-col items-center space-y-6">
+      <div class="flex flex-col items-center">
+        <Ribbow>{projectsData.etiqueta}</Ribbow>
+        <Titulo
+          titulo={projectsData.titulo}
+          resaltar={projectsData.tituloResaltado}
+        />
+      </div>
+      <Parrafo parrafo={projectsData.parrafo} />
+    </div>
+    <div class="mt-12 md:mt-20">
+      <div class="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4">
+        {
+          projectsData.proyectos.map((proyecto, index) => (
+            <ItemProject proyectos={proyecto} />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+

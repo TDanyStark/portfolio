@@ -7,7 +7,7 @@ export interface Props {
     empresa: string;
     fecha: string;
     descripcion: string;
-    verMas?: string[];
+    verMas?: string;
   };
 }
 
@@ -38,7 +38,8 @@ const { experiencia } = Astro.props;
   </div>
   <!-- Card -->
   <div
-    class="card-info-experience w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-gray-800/70 p-4 rounded-lg border border-gray-700/50 hover:border hover:border-azul-cielo transition-[border] focus:border focus:border-azul-cielo group-first:border group-first:border-azul-cielo outline-none"  tabindex="0"
+    class="card-info-experience w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-gray-800/70 p-4 rounded-lg border border-gray-700/50 hover:border hover:border-azul-cielo transition-[border] focus:border focus:border-azul-cielo group-first:border group-first:border-azul-cielo outline-none"
+    tabindex="0"
   >
     <div class="flex items-center justify-between space-x-2">
       <div class="text-lg font-semibold text-white">{experiencia.empresa}</div>
@@ -53,7 +54,12 @@ const { experiencia } = Astro.props;
     {
       experiencia.verMas && (
         <div class="mt-2">
-          <a href="#" class="text-azul-cielo hover:underline" >
+          <a
+            href={experiencia.verMas}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-azul-cielo hover:underline"
+          >
             Ver más
           </a>
         </div>
@@ -63,20 +69,10 @@ const { experiencia } = Astro.props;
 </div>
 
 <style>
-  .experience-item{
-    animation: translate-experience linear forwards;
+  .experience-item {
+    animation: translate-up linear both;
     animation-timeline: view();
-    animation-range: entry 10% cover 15%;
+    animation-range: entry 10% cover 20%;
   }
 
-  @keyframes translate-experience {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 </style>

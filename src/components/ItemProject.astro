@@ -1,0 +1,107 @@
+---
+export interface Props {
+  proyectos: {
+    img: string;
+    titulo: string;
+    descripcion: string;
+    tecnologias: string[];
+    link?: string;
+    LinkGithub?: string;
+  };
+}
+
+const { proyectos } = Astro.props;
+
+import Parrafo from "./Parrafo.astro";
+---
+
+<div
+  class="card-project flex flex-col border overflow-clip rounded-lg shadow bg-gray-800/70 border-gray-700/50 hover:border-azul-cielo transition-all group"
+>
+  <div class="relative">
+    <a target="_blank" rel="noopener noreferrer" class="block" href={proyectos.link}>
+      <img src={"/" + proyectos.img} alt={"Imagen de " + proyectos.titulo} />
+    </a>
+  </div>
+  <div class="p-4 h-full flex flex-col justify-between">
+    <div>
+      <a target="_blank" rel="noopener noreferrer" href={proyectos.link}>
+        <h5
+          class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {proyectos.titulo}
+        </h5>
+      </a>
+      <div>
+        <ul class="flex flex-wrap gap-2 my-2">
+          {
+            proyectos.tecnologias.map((tecnologia) => (
+              <li class="px-2 py-1 text-xs font-medium text-white bg-gray-700 rounded-lg">
+                {tecnologia}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="mb-3">
+        <Parrafo
+          parrafo={proyectos.descripcion}
+          size="text-sm"
+          color="text-gray-400"
+        />
+      </div>
+    </div>
+    <div class="flex items-center justify-end gap-2">
+      {
+        proyectos.LinkGithub && (
+          <a
+            href={proyectos.LinkGithub}
+            target="_blank" rel="noopener noreferrer"
+            class="border border-slate-200 p-1 rounded-full hover:border-azul-cielo hover:text-azul-cielo transition-all"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5"
+            >
+              <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+            </svg>
+          </a>
+        )
+      }
+      <a
+        href={proyectos.link ? proyectos.link : "#"}
+        target="_blank" rel="noopener noreferrer"
+        class="inline-flex font-semibold items-center rounded-full py-1 px-3 bg-gradient-to-r from-blue-900 to-azul-cielo text-white"
+      >
+        {proyectos.link ? "Ver" : "Contactar"}
+        <svg
+          class="h-5 w-5 transition translate-x-1 group-hover:translate-x-1.5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card-project {
+    animation: translate-up linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 20%;
+  }
+</style>
