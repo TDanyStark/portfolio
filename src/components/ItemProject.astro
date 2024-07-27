@@ -20,14 +20,14 @@ import Parrafo from "./Parrafo.astro";
 >
   <div class="relative">
     <a target="_blank" rel="noopener noreferrer" class="block" href={proyectos.link}>
-      <img src={"/" + proyectos.img} alt={"Imagen de " + proyectos.titulo} />
+      <img class="aspect-video w-full h-full object-cover" src={"/" + proyectos.img} alt={"Imagen de " + proyectos.titulo} />
     </a>
   </div>
   <div class="p-4 h-full flex flex-col justify-between">
     <div>
       <a target="_blank" rel="noopener noreferrer" href={proyectos.link}>
         <h5
-          class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          class="text-2xl font-bold tracking-tight text-white"
         >
           {proyectos.titulo}
         </h5>

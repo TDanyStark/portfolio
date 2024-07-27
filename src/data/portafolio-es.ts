@@ -1,4 +1,4 @@
-import type { HeroDataType, AboutDataType, ExperienceDataType, ProjectsDataType } from "../types";
+import type { HeroDataType, AboutDataType, ExperienceDataType, ProjectsDataType, SkillsDataType } from "../types";
 
 // Datos exportados
 export const HeroData: HeroDataType = {
@@ -49,7 +49,7 @@ export const ExperienceData: ExperienceDataType = {
     {
       cargo: "Desarrollador Web",
       empresa: "Innovacenter SAS",
-      fecha: "Feb/2019 - Ene/2022",
+      fecha: "Oct/2020 - Feb/2023",
       descripcion: "Desarrollé un sistema contable con manejo de inventario y ventas, y lideré proyectos de creación de páginas web para clientes de la organización."
     },
   ]
@@ -172,4 +172,73 @@ export const ProjectsData: ProjectsDataType = {
       tecnologias: ["GAS", "Google sheets"],
     },
   ],
+}
+
+export const SkillsData: SkillsDataType = {
+  etiqueta: "Skills",
+  titulo: "Fortalezas",
+  tituloResaltado: "profesionales",
+  parrafo: "Estas son algunas de las habilidades que he adquirido y perfeccionado a lo largo de mi carrera profesional.",
+  skills: [
+    {
+      nombre: "React",
+      img: "img/portafolio/skills/react.svg",
+    },
+    {
+      nombre: "JavaScript",
+      img: "img/portafolio/skills/js.svg",
+    },
+    {
+      nombre: "Astro JS",
+      img: "img/portafolio/skills/astro.svg",
+    },
+    {
+      nombre: "HTML",
+      img: "img/portafolio/skills/html.svg",
+    },
+    {
+      nombre: "CSS",
+      img: "img/portafolio/skills/CSS.svg",
+    },
+    {
+      nombre: "PHP",
+      img: "img/portafolio/skills/php.svg",
+    },
+    {
+      nombre: "Code Igniter",
+      img: "img/portafolio/skills/codeigniter.svg",
+    },
+    {
+      nombre: "Python",
+      img: "img/portafolio/skills/python.svg",
+    },
+    {
+      nombre: "Selenium",
+      img: "img/portafolio/skills/selenium.svg",
+    },
+    {
+      nombre: "Vue",
+      img: "img/portafolio/skills/vue.svg",
+    },
+    {
+      nombre: "Git",
+      img: "img/portafolio/skills/Git.svg",
+    },
+    {
+      nombre: "Github",
+      img: "img/portafolio/skills/github.svg",
+    },
+    {
+      nombre: "WordPress",
+      img: "img/portafolio/skills/wordpress.svg",
+    },
+    {
+      nombre: "Woocommerce",
+      img: "img/portafolio/skills/woo.svg",
+    },
+    {
+      nombre: "Muchas más",
+      img: "img/portafolio/skills/more.svg",
+    },
+  ]
 }

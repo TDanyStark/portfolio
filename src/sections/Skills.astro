@@ -1,0 +1,51 @@
+---
+import type { SkillsDataType } from "../types.ts";
+
+export interface Props {
+  skillsData: SkillsDataType;
+}
+
+const { skillsData } = Astro.props;
+
+import Ribbow from "../components/Ribbow.astro";
+import Titulo from "../components/Titulo.astro";
+import Parrafo from "../components/Parrafo.astro";
+---
+
+<section id="skills" class="py-36 lg:py-44 relative">
+  <div class="flex flex-col items-center space-y-6">
+    <div class="flex flex-col items-center">
+      <Ribbow>{skillsData.etiqueta}</Ribbow>
+      <Titulo
+        titulo={skillsData.titulo}
+        resaltar={skillsData.tituloResaltado}
+      />
+    </div>
+    <Parrafo parrafo={skillsData.parrafo} />
+  </div>
+  <div class="mt-12 md:mt-20">
+    <div class="max-w-[1100px] mx-auto">
+      <div class="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {
+          skillsData.skills.map((skill) => (
+            <div class="flex flex-col items-center py-2 px-8 rounded-lg border   bg-gray-800/70 border-gray-700/50 hover:border-azul-cielo hover:scale-105 transition-all">
+              <div>
+                <img
+                  width="50px"
+                  height="50px"
+                  class="max-w-full h-auto"
+                  src={skill.img}
+                  alt={skill.nombre}
+                />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">{skill.nombre}</h3>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+

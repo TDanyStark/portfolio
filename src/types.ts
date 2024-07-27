@@ -44,3 +44,14 @@ export interface ProjectsDataType {
     LinkGithub?: string;
   }[];
 }
+
+export interface SkillsDataType {
+  etiqueta: string;
+  titulo: string;
+  tituloResaltado: string;
+  parrafo: string;
+  skills: {
+    nombre: string;
+    img: string;
+  }[];
+}
