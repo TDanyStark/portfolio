@@ -20,17 +20,17 @@ import Parrafo from "./Parrafo.astro";
 >
   <div class="relative">
     <a target="_blank" rel="noopener noreferrer" class="block" href={proyectos.link}>
-      <img class="aspect-video w-full h-full object-cover" src={"/" + proyectos.img} alt={"Imagen de " + proyectos.titulo} />
+      <img width="361px" height="203px" class="aspect-video w-full h-full object-cover" loading="lazy" src={"/" + proyectos.img} alt={"Imagen de " + proyectos.titulo} />
     </a>
   </div>
   <div class="p-4 h-full flex flex-col justify-between">
     <div>
       <a target="_blank" rel="noopener noreferrer" href={proyectos.link}>
-        <h5
+        <h3
           class="text-2xl font-bold tracking-tight text-white"
         >
           {proyectos.titulo}
-        </h5>
+        </h3>
       </a>
       <div>
         <ul class="flex flex-wrap gap-2 my-2">
@@ -58,6 +58,7 @@ import Parrafo from "./Parrafo.astro";
           <a
             href={proyectos.LinkGithub}
             target="_blank" rel="noopener noreferrer"
+            aria-label="Ver en Github"
             class="border border-slate-200 p-2.5 rounded-full hover:border-azul-cielo hover:text-azul-cielo transition-all"
           >
             <svg

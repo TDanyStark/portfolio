@@ -31,7 +31,7 @@ export const ExperienceData: ExperienceDataType = {
       cargo: "Developer and communications leader",
       empresa: "Market Support",
       fecha: "Feb/2023 - Actualidad",
-      descripcion: "Lideré y desarrollé múltiples páginas y aplicaciones web para diversos clientes, incluyendo un laboratorio de renombre mundial. Implementé procesos de automatización mediante programación, mejorando la eficiencia operativa. Además, lideré un equipo técnico en transmisiones,",
+      descripcion: "Lideré y desarrollé múltiples páginas y aplicaciones web para diversos clientes, incluyendo un laboratorio de renombre mundial. Implementé procesos de automatización mediante programación, mejorando la eficiencia operativa. Además, lideré un equipo técnico en transmisiones.",
       verMas: "https://docs.google.com/document/d/1lTWbaeJLClDzqe_V9rWWpdHz87GLN6epsnL2PJFRrLw/edit#heading=h.s1bej6q54ifz"
     },
     {
@@ -64,8 +64,8 @@ export const ProjectsData: ProjectsDataType = {
   proyectos: [
     {
       img: "img/portafolio/projects/calculadora.webp",
-      titulo: "Calculadora Synthroid",
-      descripcion: "Calculadora de dosis de Synthroid para pacientes con hipotiroidismo.",
+      titulo: "TiroCare Control",
+      descripcion: "Calculadora de dosis de un medicamento para pacientes con hipotiroidismo.",
       tecnologias: ["Astro JS", "React", "Tailwind"],
       link: "https://market-support.com/apps/abbott/tirocare-control/",
       LinkGithub: "https://github.com/TDanyStark/tirocare-control/"
@@ -97,7 +97,7 @@ export const ProjectsData: ProjectsDataType = {
     {
       img: "img/portafolio/projects/album_sii.webp",
       titulo: "Album SII",
-      descripcion: "Este aplicativo tiene como propósito hacer que la visita de un visitador médico sea mas amena y eficiente.",
+      descripcion: "Este aplicativo tiene como propósito que los usuarios puedan completar su album teniendo en cuenta el tipo de paciente y su tratamiento correcto.",
       tecnologias: ["PHP", "HTML", "JS", "CSS", "MYSQL"],
       link: "https://market-support.com/apps/album_sii_bloqued/login",
       LinkGithub: "https://github.com/TDanyStark/album_sii/"
@@ -133,7 +133,7 @@ export const ProjectsData: ProjectsDataType = {
     },
     {
       img: "img/portafolio/projects/cafecitoconcata.webp",
-      titulo: "cafecito con cata",
+      titulo: "Cafecito con Cata",
       descripcion: "Pagina web de la empresa cafecito con cata, Woocommerce, learndash, membresías y afiliados, CSS, PHP.",
       tecnologias: ["Woocommerce", "CSS", "PHP"],
       link: "https://cafecitoconcata.com/",

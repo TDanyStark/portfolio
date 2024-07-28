@@ -10,6 +10,7 @@ const { skillsData } = Astro.props;
 import Ribbow from "../components/Ribbow.astro";
 import Titulo from "../components/Titulo.astro";
 import Parrafo from "../components/Parrafo.astro";
+import ItemSkill from "../components/ItemSkill.astro";
 ---
 
 <section id="skills" class="py-36 lg:py-44 relative">
@@ -28,20 +29,7 @@ import Parrafo from "../components/Parrafo.astro";
       <div class="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {
           skillsData.skills.map((skill) => (
-            <div class="flex flex-col items-center py-2 px-8 rounded-lg border   bg-gray-800/70 border-gray-700/50 hover:border-azul-cielo hover:scale-105 transition-all">
-              <div>
-                <img
-                  width="50px"
-                  height="50px"
-                  class="max-w-full h-auto"
-                  src={skill.img}
-                  alt={skill.nombre}
-                />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold">{skill.nombre}</h3>
-              </div>
-            </div>
+            <ItemSkill skill={skill} />
           ))
         }
       </div>

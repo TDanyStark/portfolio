@@ -1,0 +1,34 @@
+---
+export interface Props {
+  skill: {
+    img: string;
+    nombre: string;
+  };
+}
+
+const { skill } = Astro.props;
+---
+
+<div class="card-skill flex flex-col items-center py-2 px-8 rounded-lg border   bg-gray-800/70 border-gray-700/50 hover:border-azul-cielo hover:scale-105 transition-all">
+  <div>
+    <img
+      width="50px"
+      height="50px"
+      class="max-w-full h-auto"
+      loading="lazy"
+      src={skill.img}
+      alt={skill.nombre}
+    />
+  </div>
+  <div>
+    <h3 class="text-xl font-bold">{skill.nombre}</h3>
+  </div>
+</div>
+
+<style>
+  .card-skill{
+    animation: translate-up linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 20%;
+  }
+</style>
