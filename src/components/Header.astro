@@ -15,7 +15,7 @@ const { headerData } = Astro.props;
     <img
       width="40px"
       height="40px"
-      src={headerData.logoURL}
+      src={"/"+headerData.logoURL}
       class="w-8 h-auto"
       alt={"Logo white " + headerData.logoName}
     />
@@ -121,7 +121,7 @@ const { headerData } = Astro.props;
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="80"
-              height="53.33"
+              height="32"
               viewBox="0 0 900 600"
               class="max-w-full"
             >
