@@ -1,90 +1,181 @@
 ---
+import type { HeaderDataType } from "../types.ts";
 
+export interface Props {
+  headerData: HeaderDataType;
+}
+
+const { headerData } = Astro.props;
 ---
-<header class="max-w-screen-xl bg-slate-900/50 md:bg-transparent w-full left-0 right-0 top-0 flex items-center justify-between mx-auto p-4 sticky z-50">
-  <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse flex-1">
-    <img width="40px" height="40px" src="img/logowhite.webp" class="w-8 h-auto" alt="Logo white Daniel Amado" />
-    <span class="hidden md:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Daniel Amado</span>
+
+<header
+  class="max-w-screen-xl bg-slate-900/80 md:bg-transparent w-full left-0 right-0 top-0 flex items-center justify-between mx-auto p-4 sticky z-50"
+>
+  <a href="/" class="flex items-center space-x-3 pl-2 lg:pl-0 rtl:space-x-reverse flex-1 order-1">
+    <img
+      width="40px"
+      height="40px"
+      src={headerData.logoURL}
+      class="w-8 h-auto"
+      alt={"Logo white " + headerData.logoName}
+    />
+    <span
+      class="hidden lg:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+      >{headerData.logoName}</span
+    >
   </a>
-  <nav class="flex-1 flex justify-end  rounded-full">
-      <button id="menu-btn"type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-          <span class="sr-only">Open main menu</span>
-          <svg id="hamburguer" class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-          <!-- svg close -->
-          <svg id="close" class="hidden w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 1L1 13M1 1l12 12"/>
-          </svg>
-      </button>
-      <div class="hidden absolute p-4 md:p-0 top-12 left-0 right-0 w-full md:static md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex  backdrop-blur-xl  flex-col py-2 px-8 mt-4 border border-gray-100 rounded-lg  md:flex-row rtl:space-x-reverse md:mt-0 md:border-0 text-center gap-2">
-          <li>
-            <a href="#home" class="block py-2 px-3 text-white md:text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-azul-cielo dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
-          </li>
-          <li>
-            <a href="#about" class="block py-2 px-3 text-white md:text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-azul-cielo dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Acerca</a>
-          </li>
-          <li>
-            <a href="#experience" class="block py-2 px-3 text-white md:text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-azul-cielo dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Experiencia</a>
-          </li>
-          <li>
-            <a href="#projects" class="block py-2 px-3 text-white md:text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-azul-cielo dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Proyectos</a>
-          </li>
-          <li>
-            <a href="#contact" class="block py-2 px-3 text-white md:text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-azul-cielo dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contactame</a>
-          </li>
-        </ul>
-      </div>
+  <nav class="flex-1 flex justify-end rounded-full order-3 lg:order-2">
+    <button
+      id="menu-btn"
+      type="button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        id="hamburguer"
+        class="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
+      <!-- svg close -->
+      <svg
+        id="close"
+        class="hidden w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 14 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 1L1 13M1 1l12 12"></path>
+      </svg>
+    </button>
+    <div
+      class="hidden absolute p-4 md:p-0 top-12 left-0 right-0 w-full md:static md:block md:w-auto"
+      id="navbar-default"
+    >
+      <ul
+        class="font-medium flex bg-slate-900/50 lg:bg-transparent backdrop-blur-xl flex-col py-2 px-8 mt-4 border border-gray-100 rounded-lg md:flex-row rtl:space-x-reverse md:mt-0 md:border-0 text-center gap-2"
+      >
+        {
+          headerData.navLinks.map((link) => (
+            <li>
+              <a
+                href={link.url}
+                class="block py-2 px-3 text-white hover:text-azul-cielo"
+              >
+                {link.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </nav>
-  <div class="hidden lg:block text-white flex-1 text-right">
-    <a href="/">ES</a>
-    <span>/</span>
-    <a href="/en">EN</a>
+  <div class="flex md:hidden text-white flex-1 lg:flex justify-center lg:justify-end order-2 lg:order-3">
+    <div class="w-10 h-auto">
+      {
+        headerData.idioma === "es" ? (
+          <a class="block max-w-full" href="/en">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 30"
+              width="80"
+              height="32"
+              class="max-w-full"
+            >
+              <clipPath id="t">
+                <path d="M25,15h25v15zv15h-25zh-25v-15zv-15h25z" />
+              </clipPath>
+              <path d="M0,0v30h50v-30z" fill="#012169" />
+              <path d="M0,0 50,30M50,0 0,30" stroke="#fff" stroke-width="6" />
+              <path
+                d="M0,0 50,30M50,0 0,30"
+                clip-path="url(#t)"
+                stroke="#C8102E"
+                stroke-width="4"
+              />
+              <path
+                d="M-1 11h22v-12h8v12h22v8h-22v12h-8v-12h-22z"
+                fill="#C8102E"
+                stroke="#FFF"
+                stroke-width="2"
+              />
+            </svg>
+          </a>
+        ) : (
+          <a class="block max-w-full" href="/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="53.33"
+              viewBox="0 0 900 600"
+              class="max-w-full"
+            >
+              <path fill="#ffcd00" d="M0 0h900v600H0z" />
+              <path fill="#003087" d="M0 300h900v300H0z" />
+              <path fill="#c8102e" d="M0 450h900v150H0z" />
+            </svg>
+          </a>
+        )
+      }
+    </div>
   </div>
 </header>
 
 <script>
-  document.getElementById('menu-btn')?.addEventListener('click', function() {
-    var navbar = document.getElementById('navbar-default');
-    navbar?.classList.toggle('hidden');
-    document.getElementById('hamburguer')?.classList.toggle('hidden');
-    document.getElementById('close')?.classList.toggle('hidden');
+  document.getElementById("menu-btn")?.addEventListener("click", function () {
+    var navbar = document.getElementById("navbar-default");
+    navbar?.classList.toggle("hidden");
+    document.getElementById("hamburguer")?.classList.toggle("hidden");
+    document.getElementById("close")?.classList.toggle("hidden");
   });
 </script>
 
 <style>
-  header >a , header > div {
+  header > a,
+  header > div {
     animation: none;
-
   }
 
   @keyframes on-scroll {
-
     to {
       opacity: 0;
       pointer-events: none;
     }
-    
   }
 
   @keyframes on-scroll-color {
-    to{
+    to {
       background-color: rgba(25, 25, 25, 0.4);
       margin-top: -1rem;
-      border-radius: 0 0 .5rem .5rem;
+      border-radius: 0 0 0.5rem 0.5rem;
     }
   }
 
   /* @media 768px min width */
   @media (min-width: 1000px) {
-    header >a , header > div {
+    header > a,
+    header > div {
       animation: on-scroll linear both;
       animation-timeline: scroll(root block);
       animation-range: 0% 100px;
     }
 
-    header > nav ul{
+    header > nav ul {
       animation: on-scroll-color linear both;
       animation-timeline: scroll(root block);
       animation-range: 0% 100px;

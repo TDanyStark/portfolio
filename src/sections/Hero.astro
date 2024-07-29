@@ -12,14 +12,14 @@ import Ribbow from "../components/Ribbow.astro";
 import Parrafo from "../components/Parrafo.astro";
 ---
 
-<section id="home" class="py-40">
+<section id="hero" class="py-40">
   <div>
     <div class="relative mt-4">
       <div class="flex justify-center">
         <Ribbow fontsize="text-sm">{heroData.estado}</Ribbow>
       </div>
       <h1 class="text-5xl md:text-7xl text-center font-semibold">
-        👋🏻¡Hola, soy <span
+        👋🏻{heroData.saludo} <span
           class="bg-gradient-to-r from-azul-cielo to-azul-claro inline-block text-transparent bg-clip-text font-bold"
           >{heroData.nombre}!</span
         >

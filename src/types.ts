@@ -1,5 +1,17 @@
+
+export interface HeaderDataType {
+  logoName: string;
+  logoURL: string;
+  idioma: string;
+  navLinks: {
+    text: string;
+    url: string;
+  }[];
+}
+
 export interface HeroDataType {
   estado: string;
+  saludo: string;
   nombre: string;
   perfil: string;
   LinkedIn: string;
@@ -54,4 +66,15 @@ export interface SkillsDataType {
     nombre: string;
     img: string;
   }[];
+}
+
+export interface ContactDataType {
+  copy: string;
+  callToAction: string;
+  email: string;
+}
+
+export interface FooterDataType {
+  creditos: string;
+  comunidad: string;
 }

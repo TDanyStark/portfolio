@@ -5,15 +5,18 @@ import Hero from "../sections/Hero.astro";
 import Background1 from "../components/Background1.astro";
 import About from "../sections/About.astro";
 import Lottie from "../components/Lottie.astro";
-import { HeroData, AboutData, ExperienceData, ProjectsData, SkillsData } from "../data/portafolio-es.ts";
+import { HeaderData, HeroData, AboutData, ExperienceData, ProjectsData, SkillsData, ContactData, FooterData } from "../data/portafolio-es.ts";
 import Experiencia from "../sections/Experience.astro";
 import Projects from "../sections/Projects.astro";
 import Skills from "../sections/Skills.astro";
+import Contact from "../sections/Contact.astro";
+import Footer from "../sections/Footer.astro";
+import Gostart from "../components/Gostart.astro";
 ---
 
 <Layout title="Daniel Amado - Portafolio" lang="es">
   <Background1 />
-  <Header />
+  <Header headerData={HeaderData} />
   <main class="overflow-clip p-3 lg:p-0">
     <div class="max-w-[1200px] mx-auto">
       <Hero heroData={HeroData} />
@@ -22,8 +25,11 @@ import Skills from "../sections/Skills.astro";
       <Experiencia experienceData={ExperienceData} />
       <Projects projectsData={ProjectsData} />
       <Skills skillsData={SkillsData} />
+      <Contact contactData={ContactData}  />
+      <Footer footerData={FooterData} />
     </div>
   </main>
+  <Gostart />
 
 </Layout>
 

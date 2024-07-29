@@ -3,105 +3,105 @@ import type { HeaderDataType, HeroDataType, AboutDataType, ExperienceDataType, P
 export const HeaderData: HeaderDataType = {
   logoName: "Daniel Amado",
   logoURL: "img/logowhite.webp",
-  idioma: "es",
+  idioma: "en",
   navLinks: [
-    { text: "Acerca", url: "#about" },
-    { text: "Experiencia", url: "#experience" },
-    { text: "Proyectos", url: "#projects" },
+    { text: "About", url: "#about" },
+    { text: "Experience", url: "#experience" },
+    { text: "Projects", url: "#projects" },
     { text: "Skills", url: "#skills" },
-    { text: "Contácteme", url: "#contact" },
+    { text: "Contact", url: "#contact" },
   ],
 };
 
-// Datos exportados
+// Exported data
 export const HeroData: HeroDataType = {
-  estado: "¡Abierto a nuevas oportunidades!",
-  saludo: "¡Hola, soy",
+  estado: "Open to new opportunities!",
+  saludo: "Hello, I'm",
   nombre: "Daniel",
-  perfil: "Desarrollador Fullstack",
+  perfil: "Fullstack Developer",
   LinkedIn: "https://www.linkedin.com/in/danielamadov/",
   GitHub: "https://github.com/TDanyStark",
   CV: "cv/CV_DANIEL_AMADO.pdf",
 };
 
 export const AboutData: AboutDataType = {
-  etiqueta: "Acerca de mi",
-  titulo: "¿Quién es",
+  etiqueta: "About me",
+  titulo: "Who is",
   tituloResaltado: "Daniel?",
   nombre: "Daniel Amado",
   rutaFoto: "img/Team-01.jpg",
-  parrafo: "<strong>Soy un apasionado por la tecnología</strong> y siempre al día con las últimas tendencias. Me encanta resolver problemas y encontrar soluciones creativas. Tengo <strong>1 año de experiencia como docente</strong> y <strong>3 años en el sector IT y de programación</strong>, donde he podido interactuar en todas las etapas de un desarrollo web, desde el <strong>frontend</strong>, que es mi pasión, hasta el backend y el despliegue. Siempre busco <strong>automatizar procesos a través de la programación</strong>, optimizando operaciones y mejorando la productividad. Además, <strong>utilizo la inteligencia artificial en los procesos donde es útil</strong> para ser altamente eficiente en áreas clave. Me encanta colaborar y aprender continuamente, enfrentando desafíos que me permitan aplicar y expandir mis habilidades para <strong>impulsar la eficiencia y el rendimiento en cada proyecto</strong> que emprendo."
+  parrafo: "<strong>I am passionate about technology</strong> and always up-to-date with the latest trends. I love solving problems and finding creative solutions. I have <strong>1 year of experience as a teacher</strong> and <strong>3 years in the IT and programming sector</strong>, where I have been involved in all stages of web development, from <strong>frontend</strong>, which is my passion, to backend and deployment. I always strive to <strong>automate processes through programming</strong>, optimizing operations and improving productivity. Additionally, <strong>I use artificial intelligence in processes where it is useful</strong> to be highly efficient in key areas. I love collaborating and continuously learning, facing challenges that allow me to apply and expand my skills to <strong>drive efficiency and performance in every project</strong> I undertake."
 };
 
-// organizar experiencia de mayor a menor
+// Organize experience from most recent to oldest
 export const ExperienceData: ExperienceDataType = {
-  etiqueta: "Experiencia",
-  titulo: "Trayectoria",
-  tituloResaltado: "Profesional",
-  parrafo: "Mi experiencia laboral ha sido muy variada, desde la docencia hasta el desarrollo de soluciones digitales con código, y con CMS",
+  etiqueta: "Experience",
+  titulo: "Professional",
+  tituloResaltado: "Journey",
+  parrafo: "My work experience has been very varied, from teaching to developing digital solutions with code and with CMS",
   experiencia: [
     {
       cargo: "Developer and communications leader",
       empresa: "Market Support",
-      fecha: "Feb/2023 - Actualidad",
-      descripcion: "Lideré y desarrollé múltiples páginas y aplicaciones web para diversos clientes, incluyendo un laboratorio de renombre mundial. Implementé procesos de automatización mediante programación, mejorando la eficiencia operativa. Además, lideré un equipo técnico en transmisiones.",
+      fecha: "Feb/2023 - Present",
+      descripcion: "Led and developed multiple web pages and applications for various clients, including a world-renowned laboratory. Implemented automation processes through programming, improving operational efficiency. Additionally, led a technical team in broadcasts.",
       verMas: "https://docs.google.com/document/d/1lTWbaeJLClDzqe_V9rWWpdHz87GLN6epsnL2PJFRrLw/edit#heading=h.s1bej6q54ifz"
     },
     {
-      cargo: "Instructor de Programación",
+      cargo: "Programming Instructor",
       empresa: "SENA",
-      fecha: "Nov/2022 - Dic/2022",
-      descripcion: "Enseñé programación en Python a jóvenes, fomentando la innovación y el pensamiento disruptivo para completar proyectos de área con éxito."
+      fecha: "Nov/2022 - Dec/2022",
+      descripcion: "Taught Python programming to young people, fostering innovation and disruptive thinking to successfully complete area projects."
     },
     {
-      cargo: "Docente de programación",
+      cargo: "Programming Teacher",
       empresa: "Liceo adventista libertad",
       fecha: "Feb/2022 - Nov/2022",
-      descripcion: "Guié a estudiantes de último grado en la finalización de sus proyectos de programación, apoyando el desarrollo de sus proyectos de grado."
+      descripcion: "Guided final-year students in completing their programming projects, supporting the development of their final projects."
     },
     {
-      cargo: "Desarrollador Web",
+      cargo: "Web Developer",
       empresa: "Innovacenter SAS",
       fecha: "Oct/2020 - Feb/2023",
-      descripcion: "Desarrollé un sistema contable con manejo de inventario y ventas, y lideré proyectos de creación de páginas web para clientes de la organización."
+      descripcion: "Developed an accounting system with inventory and sales management, and led projects to create web pages for the company's clients."
     },
   ]
 };
 
 export const ProjectsData: ProjectsDataType = {
-  etiqueta: "Proyectos",
-  titulo: "Experiencias",
-  tituloResaltado: "Significativas",
-  parrafo: "Estos son algunos de los proyectos recientes que han sido fundamentales en mi desarrollo profesional y han contribuido significativamente a mi crecimiento en la industria.",
+  etiqueta: "Projects",
+  titulo: "Significant",
+  tituloResaltado: "Experiences",
+  parrafo: "These are some of the recent projects that have been fundamental to my professional development and have significantly contributed to my growth in the industry.",
   proyectos: [
     {
       img: "img/portafolio/projects/calculadora.webp",
       titulo: "TiroCare Control",
-      descripcion: "Calculadora de dosis de un medicamento para pacientes con hipotiroidismo.",
+      descripcion: "Medication dose calculator for patients with hypothyroidism.",
       tecnologias: ["Astro JS", "React", "Tailwind"],
       link: "https://market-support.com/apps/abbott/tirocare-control/",
       LinkGithub: "https://github.com/TDanyStark/tirocare-control/"
     },
     {
       img: "img/portafolio/projects/elmetodo.webp",
-      titulo: "El método más confiable es tu conocimiento",
-      descripcion: "Este aplicativo tiene como objetivo probar y aumentar los conocimientos que tienen los estudiantes universitarios acerca de los diferentes métodos anticonceptivos.",
+      titulo: "The most reliable method is your knowledge",
+      descripcion: "This application aims to test and increase university students' knowledge about different contraceptive methods.",
       tecnologias: ["Astro JS", "React", "Tailwind"],
       link: "https://market-support.com/apps/abbott/el-metodo-mas-confiable/",
       LinkGithub: "https://github.com/TDanyStark/el-metodo-mas-confiable-es-tu-conocimiento/"
     },
     {
       img: "img/portafolio/projects/quetantoconosex.webp",
-      titulo: "Que tanto conosex",
-      descripcion: "Este aplicativo tiene como objetivo promover, de manera lúdica, conocimientos clave sobre salud sexual y reproductiva.",
+      titulo: "How much do you know?",
+      descripcion: "This application aims to promote key knowledge about sexual and reproductive health in a playful way.",
       tecnologias: ["Astro JS", "HTML", "CSS", "JS", "Tailwind"],
       link: "https://market-support.com/apps/abbott/que-tanto-conosex/",
       LinkGithub: "https://github.com/TDanyStark/app-que-tanto-conosex/"
     },
     {
       img: "img/portafolio/projects/mandalas.webp",
-      titulo: "Pintar Mandalas",
-      descripcion: "Este aplicativo tiene como propósito invitar a los pacientes a relajarse y reducir el estrés mediante la pintura de mandalas.",
+      titulo: "Paint Mandalas",
+      descripcion: "This application aims to invite patients to relax and reduce stress by painting mandalas.",
       tecnologias: ["Astro JS", "HTML", "JS", "Tailwind"],
       link: "https://market-support.com/apps/abbott/mandalas-emocionales/",
       LinkGithub: "https://github.com/TDanyStark/pintar-mandalas/"
@@ -109,15 +109,15 @@ export const ProjectsData: ProjectsDataType = {
     {
       img: "img/portafolio/projects/album_sii.webp",
       titulo: "Album SII",
-      descripcion: "Este aplicativo tiene como propósito que los usuarios puedan completar su album teniendo en cuenta el tipo de paciente y su tratamiento correcto.",
+      descripcion: "This application aims to allow users to complete their album taking into account the type of patient and their correct treatment.",
       tecnologias: ["PHP", "HTML", "JS", "CSS", "MYSQL"],
       link: "https://market-support.com/apps/album_sii_bloqued/login",
       LinkGithub: "https://github.com/TDanyStark/album_sii/"
     },
     {
       img: "img/portafolio/projects/mapadolor.webp",
-      titulo: "Mapa interactivo del dolor",
-      descripcion: "Este aplicativo tiene como propósito medir el umbral del dolor de un paciente.",
+      titulo: "Interactive pain map",
+      descripcion: "This application aims to measure a patient's pain threshold.",
       tecnologias: ["HTML", "JS", "CSS"],
       link: "https://market-support.com/apps/mapa-interactivo-dolor/",
       LinkGithub: "https://github.com/TDanyStark/Mapa-casos-de-dolor/"
@@ -125,62 +125,62 @@ export const ProjectsData: ProjectsDataType = {
     {
       img: "img/portafolio/projects/market.webp",
       titulo: "Market Support",
-      descripcion: "Pagina web de la empresa Market Support.",
+      descripcion: "Website of the company Market Support.",
       tecnologias: ["WordPress", "CSS"],
       link: "https://market-support.com",
     },
     {
       img: "img/portafolio/projects/bbm.webp",
-      titulo: "BBM producciones",
-      descripcion: "Pagina web de la empresa BBM producciones.",
+      titulo: "BBM productions",
+      descripcion: "Website of the company BBM productions.",
       tecnologias: ["WordPress", "CSS"],
       link: "https://bbmproducciones.com.co/",
     },
     {
       img: "img/portafolio/projects/autoclic.webp",
       titulo: "Autoclic",
-      descripcion: "Pagina web de la empresa Autoclic.",
+      descripcion: "Website of the company Autoclic.",
       tecnologias: ["WordPress", "CSS", "PHP"],
       link: "https://autoclic.com.co/",
     },
     {
       img: "img/portafolio/projects/cafecitoconcata.webp",
       titulo: "Cafecito con Cata",
-      descripcion: "Pagina web de la empresa cafecito con cata, Woocommerce, learndash, membresías y afiliados, CSS, PHP.",
+      descripcion: "Website of the company Cafecito con Cata, Woocommerce, learndash, memberships and affiliates, CSS, PHP.",
       tecnologias: ["Woocommerce", "CSS", "PHP"],
       link: "https://cafecitoconcata.com/",
     },
     {
       img: "img/portafolio/projects/equipomas.webp",
       titulo: "Equipo MAS",
-      descripcion: "Pagina web de la empresa Equipo MAS, Woocommerce, learndash, membresías, CSS, PHP.",
+      descripcion: "Website of the company Equipo MAS, Woocommerce, learndash, memberships, CSS, PHP.",
       tecnologias: ["Woocommerce", "CSS", "PHP"],
       link: "https://equipomas.com/",
     },
     {
       img: "img/portafolio/projects/hellomarketeros.webp",
       titulo: "Hello marketeros",
-      descripcion: "Pagina web de la empresa Hello marketeros, Woocommerce, learndash, CSS.",
+      descripcion: "Website of the company Hello marketeros, Woocommerce, learndash, CSS.",
       tecnologias: ["Woocommerce", "CSS"],
       link: "https://cursos.market-support.com/",
     },
     {
       img: "img/portafolio/projects/enextge.webp",
       titulo: "e-nextGe",
-      descripcion: "Pagina web de la empresa e-nextGe.",
+      descripcion: "Website of the company e-nextGe.",
       tecnologias: ["Woocommerce", "CSS"],
       link: "https://e-nextge.com/",
     },
     {
       img: "img/portafolio/projects/sheetzoom.webp",
-      titulo: "Creador de webinars, y automatización",
-      descripcion: "Sistema para crear webinars en zoom automáticamente con un solo clic, envío de links en formato HTML, envío de informes, etc.",
+      titulo: "Webinar creator, and automation",
+      descripcion: "System to automatically create webinars in zoom with a single click, sending links in HTML format, sending reports, etc.",
       tecnologias: ["GAS", "Google sheets"],
     },
     {
       img: "img/portafolio/projects/enviomails.webp",
-      titulo: "Email marketing con sheets y GAS",
-      descripcion: "Script para hacer email marketing a 1500 correos al dia.",
+      titulo: "Email marketing with sheets and GAS",
+      descripcion: "Script to do email marketing to 1500 emails per day.",
       tecnologias: ["GAS", "Google sheets"],
     },
   ],
@@ -188,9 +188,9 @@ export const ProjectsData: ProjectsDataType = {
 
 export const SkillsData: SkillsDataType = {
   etiqueta: "Skills",
-  titulo: "Fortalezas",
-  tituloResaltado: "profesionales",
-  parrafo: "Estas son algunas de las habilidades que he adquirido y perfeccionado a lo largo de mi carrera profesional.",
+  titulo: "Professional",
+  tituloResaltado: "Strengths",
+  parrafo: "These are some of the skills I have acquired and refined throughout my professional career.",
   skills: [
     {
       nombre: "React",
@@ -249,19 +249,19 @@ export const SkillsData: SkillsDataType = {
       img: "img/portafolio/skills/woo.svg",
     },
     {
-      nombre: "Muchas más",
+      nombre: "Many more",
       img: "img/portafolio/skills/more.svg",
     },
   ]
 }
 
 export const ContactData: ContactDataType = {
-  copy: "¿Tienes un proyecto en mente o simplemente quieres saludar? ¡No dudes en ponerte en contacto conmigo!",
-  callToAction: "¡Hablemos!",
+  copy: "Do you have a project in mind or just want to say hi? Don't hesitate to get in touch with me!",
+  callToAction: "Let's talk!",
   email: "daniel.amadove@gmail.com",
 };
 
 export const FooterData: FooterDataType = {
-  creditos: "Hecho con ❤️ por Daniel Amado",
-  comunidad: "si te gusta esta landing puedes clonarla en mi github",
+  creditos: "Made with ❤️ by Daniel Amado",
+  comunidad: "if you like this landing page, you can clone it on my github",
 }

@@ -1,7 +1,47 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../sections/Hero.astro";
+import Background1 from "../../components/Background1.astro";
+import About from "../../sections/About.astro";
+import Lottie from "../../components/Lottie.astro";
+import { HeaderData, HeroData, AboutData, ExperienceData, ProjectsData, SkillsData, ContactData, FooterData } from "../../data/portafolio-en.ts";
+import Experiencia from "../../sections/Experience.astro";
+import Projects from "../../sections/Projects.astro";
+import Skills from "../../sections/Skills.astro";
+import Contact from "../../sections/Contact.astro";
+import Footer from "../../sections/Footer.astro";
+import Gostart from "../../components/Gostart.astro";
 ---
 
-<Layout title="Portfolio Daniel Amado" lang="en">
-	<h1>Hello en ingles</h1>
+<Layout title="Daniel Amado - Portfolio" lang="en">
+  <Background1 />
+  <Header headerData={HeaderData} />
+  <main class="overflow-clip p-3 lg:p-0">
+    <div class="max-w-[1200px] mx-auto">
+      <Hero heroData={HeroData} />
+      <!-- <Lottie /> -->
+      <About aboutData={AboutData} />
+      <Experiencia experienceData={ExperienceData} />
+      <Projects projectsData={ProjectsData} />
+      <Skills skillsData={SkillsData} />
+      <Contact contactData={ContactData}  />
+      <Footer footerData={FooterData} />
+    </div>
+  </main>
+  <Gostart />
+
 </Layout>
+
+<style is:global>
+  @keyframes translate-up {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
