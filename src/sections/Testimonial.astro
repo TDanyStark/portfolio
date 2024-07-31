@@ -1,0 +1,49 @@
+---
+import type { TestimonialsDataType } from "../types.ts";
+export interface Props {
+  testimonialData: TestimonialsDataType;
+}
+
+const { testimonialData } = Astro.props;
+
+testimonialData.testimonios.map((test) =>{
+            console.log(test);
+          })
+
+import Parrafo from "../components/Parrafo.astro";
+import Ribbow from "../components/Ribbow.astro";
+import Titulo from "../components/Titulo.astro";
+import ItemTestimonial from "../components/ItemTestimonial.astro";
+---
+
+<section id="testimonial" class="py-36 lg:py-44">
+  <div class="blur-3xl relative pointer-events-none">
+    <div
+      class="absolute left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-r from-green-400 from-0% via-cyan-500 to-blue-500 opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+      style="clip-path: polygon(37% 53%, 12% 34%, 0 27%, 0 78%, 19% 94%, 61% 91%, 87% 91%, 97% 69%, 98% 46%, 59% 32%);"
+    >
+    </div>
+  </div>
+  <div class="relative">
+    <div class="flex flex-col items-center space-y-6">
+      <div class="flex flex-col items-center">
+        <Ribbow>{testimonialData.etiqueta}</Ribbow>
+        <Titulo
+          titulo={testimonialData.titulo}
+          resaltar={testimonialData.tituloResaltado}
+        />
+      </div>
+      <Parrafo parrafo={testimonialData.parrafo} />
+    </div>
+  </div>
+  <div class="mt-12 md:mt-20 relative">
+    <div class="max-w-[1200px] mx-auto grid grid-cols-3 gap-6">
+      {
+        testimonialData.testimonios.map((test) => (
+          <ItemTestimonial testimonio={test} />
+        ))
+      }
+    </div>
+  </div>
+</section>
+

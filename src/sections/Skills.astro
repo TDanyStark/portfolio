@@ -14,7 +14,7 @@ import ItemSkill from "../components/ItemSkill.astro";
 ---
 
 <section id="skills" class="py-36 lg:py-44 relative">
-  <div class="flex flex-col items-center space-y-6">
+  <div class="flex flex-col items-center space-y-6 relative">
     <div class="flex flex-col items-center">
       <Ribbow>{skillsData.etiqueta}</Ribbow>
       <Titulo
@@ -24,7 +24,13 @@ import ItemSkill from "../components/ItemSkill.astro";
     </div>
     <Parrafo parrafo={skillsData.parrafo} />
   </div>
-  <div class="mt-12 md:mt-20">
+  <div class="blur-3xl -z-10 relative pointer-events-none">
+    <div
+      class="absolute aspect-[4/2] w-[30rem] rotate-[10deg] bg-custom-radial-1 al-1 opacity-20 sm:w-[50rem]"
+    >
+    </div>
+  </div>
+  <div class="mt-12 md:mt-20 relative">
     <div class="max-w-[1100px] mx-auto">
       <div class="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {

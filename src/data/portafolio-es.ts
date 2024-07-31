@@ -1,4 +1,4 @@
-import type { HeaderDataType, HeroDataType, AboutDataType, ExperienceDataType, ProjectsDataType, SkillsDataType, ContactDataType, FooterDataType } from "../types";
+import type { HeaderDataType, HeroDataType, AboutDataType, ExperienceDataType, ProjectsDataType, SkillsDataType, ContactDataType, FooterDataType, TestimonialsDataType } from "../types";
 
 export const HeaderData: HeaderDataType = {
   logoName: "Daniel Amado",
@@ -189,7 +189,7 @@ export const ProjectsData: ProjectsDataType = {
 export const SkillsData: SkillsDataType = {
   etiqueta: "Skills",
   titulo: "Fortalezas",
-  tituloResaltado: "profesionales",
+  tituloResaltado: "Profesionales",
   parrafo: "Estas son algunas de las habilidades que he adquirido y perfeccionado a lo largo de mi carrera profesional.",
   skills: [
     {
@@ -255,8 +255,41 @@ export const SkillsData: SkillsDataType = {
   ]
 }
 
+export const TestimonialsData: TestimonialsDataType = {
+  etiqueta: "Testimonios",
+  titulo: "Profesionales que",
+  tituloResaltado: "Admiro",
+  parrafo: "Estas son algunas de las opiniones de profesionales con los que he tenido el gusto de colaborar.",
+  testimonios: [
+    {
+      nombre: "Camilo Pabon",
+      cargo: "Desarrollador backend Java",
+      empresa: "Wecall",
+      comentario: "Daniel es un excelente profesional, siempre dispuesto a ayudar y aportar soluciones creativas a los problemas. Su conocimiento en frontend es impresionante y su capacidad para trabajar en equipo es excepcional.",
+      img: "/img/portafolio/testimonials/camilo.webp",
+      linkLinkedIn: "https://www.linkedin.com/in/jcpbo/"
+    },
+    {
+      nombre: "Joseph Guerrero",
+      cargo: "Desarrollador mid-level frontend",
+      empresa: "Globant",
+      comentario: "Sus ganas de avanzar y sus grandes talentos lo han hecho llegar muy lejos. Sus principios y habilidades blandas lo hacen sobresalir siempre y da gusto participar en sus reuniones y revisar su código de gran calidad.",
+      img: "/img/portafolio/testimonials/joseph.webp",
+      linkLinkedIn: "https://www.linkedin.com/in/joseth-guerrero-b267975b/"
+    },
+    {
+      nombre: "Sandy Baron",
+      cargo: "CEO",
+      empresa: "Market Support",
+      comentario: "Daniel es un excelente profesional, siempre dispuesto a ayudar y aportar soluciones creativas a los problemas. Su conocimiento en frontend es impresionante y su capacidad para trabajar en equipo es excepcional.",
+      img: "/img/portafolio/testimonials/sandy.webp",
+      linkLinkedIn: "https://www.linkedin.com/in/sandy-barón-701a4a129/"
+    }
+  ],
+}
+
 export const ContactData: ContactDataType = {
-  copy: "¿Tienes un proyecto en mente o simplemente quieres saludar? ¡No dudes en ponerte en contacto conmigo!",
+  copy: "¿Tienes un proyecto en mente o quieres transformar tu idea en realidad? ¡No dudes en ponerte en contacto conmigo!",
   callToAction: "¡Hablemos!",
   email: "daniel.amadove@gmail.com",
 };

@@ -9,7 +9,7 @@ export interface Props {
 const { skill } = Astro.props;
 ---
 
-<div class="card-skill flex flex-col items-center py-2 px-8 rounded-lg border   bg-gray-800/70 border-gray-700/50 hover:border-azul-cielo hover:scale-105 transition-all">
+<article class="card-skill flex flex-col items-center py-2 px-8 rounded-lg border bg-gray-800/70 border-gray-700/50 hover:border-azul-cielo hover:scale-105 transition-all">
   <div>
     <img
       width="50px"
@@ -23,7 +23,7 @@ const { skill } = Astro.props;
   <div>
     <h3 class="text-xl font-bold">{skill.nombre}</h3>
   </div>
-</div>
+</article>
 
 <style>
   .card-skill{

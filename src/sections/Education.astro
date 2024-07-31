@@ -1,0 +1,105 @@
+---
+
+---
+<article>
+  <div class="board">
+    <div class="text-wrap">
+      <div aria-hidden="true" class="fluid">CSS</div>
+    </div>
+  </div>
+  <div class="details">
+    <h2 class="fluid"><a href="#">CSS Matrix Board</a></h2>
+    <p>
+      The power of masking text under a repeating background with
+      mix-blend-mode thrown in.
+    </p>
+  </div>
+</article>
+
+<style>
+  article {
+    background: #131313;
+    width: clamp(360px, 50vw, 600px);
+    min-height: 200px;
+    max-height: 450px;
+    border: 1px solid color-mix(in lch, canvas, canvasText 35%);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 1px 0 0 hsl(0 0% 100% / 0.5) inset;
+  }
+
+  .board {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    container-type: inline-size;
+    overflow: hidden;
+    filter: contrast(2);
+    flex: 1;
+  }
+
+  .board .fluid {
+    margin: 0;
+    font-size: 12rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1em;
+    font-family: 'Roboto', sans-serif;
+    filter: blur(2px) brightness(1.5);
+    color: hsl(180 100% 50%);
+    height: 100%;
+    width: 100%;
+    mask: radial-gradient(circle at center, #000 1px, #0000 1px) 50% 50% /
+      1.5cqi 1.5cqi;
+    position: relative;
+  }
+  .text-wrap {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    clip-path: inset(0 0 0 100%);
+  }
+
+  .text-wrap,
+  .board .fluid {
+    transition: clip-path 0.5s steps(20);
+  }
+
+  article:is(:hover, :focus-within) .text-wrap {
+    transition: clip-path 0s;
+    clip-path: inset(0 0 0 0);
+  }
+
+  .board .fluid {
+    clip-path: inset(0 100% 0 0);
+    transition-delay: 0.5s;
+  }
+
+  article:is(:hover, :focus-within) .board .fluid {
+    clip-path: inset(0 0 0 0);
+    transition-delay: 0s;
+  }
+
+  article .board::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    mix-blend-mode: plus-lighter;
+    background: radial-gradient(
+        circle at center,
+        hsl(0 0% 40%) 1px,
+        transparent 1px
+      )
+      50% 50% / 1.5cqi 1.5cqi;
+  }
+</style>

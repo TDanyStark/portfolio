@@ -68,6 +68,21 @@ export interface SkillsDataType {
   }[];
 }
 
+export interface TestimonialsDataType {
+  etiqueta: string;
+  titulo: string;
+  tituloResaltado: string;
+  parrafo: string;
+  testimonios: {
+    nombre: string;
+    cargo: string;
+    empresa: string;
+    comentario: string;
+    img: string;
+    linkLinkedIn: string;
+  }[];
+}
+
 export interface ContactDataType {
   copy: string;
   callToAction: string;

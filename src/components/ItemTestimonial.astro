@@ -1,0 +1,100 @@
+---
+export interface Props {
+  testimonio: {
+    nombre: string;
+    cargo: string;
+    empresa: string;
+    comentario: string;
+    img: string;
+    linkLinkedIn: string;
+  };
+}
+
+const { testimonio } = Astro.props;
+
+const cargoEmpresa = `${testimonio.cargo} en ${testimonio.empresa}`;
+
+import Parrafo from "./Parrafo.astro";
+---
+
+<article
+  class="card-testimonial flex flex-col py-4 px-4 rounded-lg border bg-gray-800/70 border-gray-700/50 hover:border-azul-cielo transition-all"
+>
+  <div class="text-azul-cielo">
+    <svg
+      fill="currentColor"
+      width="40"
+      height="40"
+      viewBox="0 0 32 32"
+      id="icon"
+      xmlns="http://www.w3.org/2000/svg"
+      ><defs
+        ><style>
+          .cls-1 {
+            fill: none;
+          }
+        </style></defs
+      ><title>quotes</title><path
+        d="M12,15H6.11A9,9,0,0,1,10,8.86l1.79-1.2L10.69,6,8.9,7.2A11,11,0,0,0,4,16.35V23a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V17A2,2,0,0,0,12,15Z"
+      ></path><path
+        d="M26,15H20.11A9,9,0,0,1,24,8.86l1.79-1.2L24.7,6,22.9,7.2A11,11,0,0,0,18,16.35V23a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V17A2,2,0,0,0,26,15Z"
+      ></path><rect
+        id="_Transparent_Rectangle_"
+        data-name="<Transparent Rectangle>"
+        class="cls-1"
+        width="32"
+        height="32"></rect></svg
+    >
+  </div>
+  <div class="mt-4">
+    <Parrafo parrafo={testimonio.comentario} size="text-base" />
+  </div>
+  <div
+    class="h-px w-[90%] mx-auto bg-gradient-to-r from-transparent via-azul-cielo to-transparent mt-6"
+  >
+  </div>
+
+  <div class="mt-6">
+    <div class="space-y-4">
+      <a class="flex items-center gap-2" href={testimonio.linkLinkedIn} target="_blank" rel="noopener noreferrer">
+        <div>
+          <img
+            class="max-w-full h-auto rounded-full"
+            width="60px"
+            height="60px"
+            src={testimonio.img}
+            alt={testimonio.nombre}
+          />
+        </div>
+
+        <div>
+          <div class="flex items-center gap-1">
+            <h3>
+              {testimonio.nombre}
+            </h3>
+            <svg
+              width="20px"
+              height="20px"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+            >
+              <!-- Fondo -->
+              <rect width="16" height="16" fill="#0A66C2" rx="2" ry="2"></rect>
+              <!-- Letras -->
+              <path
+                fill="#FFFFFF"
+                d="M4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14z"
+              ></path>
+            </svg>
+          </div>
+          <Parrafo
+            parrafo={cargoEmpresa}
+            size="text-sm"
+            color="text-gray-500"
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+</article>
