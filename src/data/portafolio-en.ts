@@ -3,7 +3,7 @@ import type { HeaderDataType, HeroDataType, AboutDataType, ExperienceDataType, P
 export const HeaderData: HeaderDataType = {
   logoName: "Daniel Amado",
   logoURL: "img/logowhite.webp",
-  idioma: "es",
+  idioma: "en",
   navLinks: [
     { text: "About", url: "#about" },
     { text: "Experience", url: "#experience" },
