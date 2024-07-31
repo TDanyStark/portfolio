@@ -1,0 +1,73 @@
+---
+import type { SkillsDataType } from "../types.ts";
+
+export interface Props {
+  logos: SkillsDataType["skills"];
+  reversed?: boolean;
+}
+
+const { logos, reversed = false } = Astro.props;
+
+// desordenar logos
+logos.sort(() => Math.random() - 0.5);
+---
+
+{
+  reversed ? (
+    <div class="relative px-8 m-auto max-w-[600px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-gradient-to-r before:from-gray-900 before:via-transparent before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-gradient-to-r after:from-gray-900 after:via-transparent">
+      <div class="animate-infinite-slider-to-right flex gap-6">
+        {logos.map((logo) => (
+          <img class="w-12 h-auto max-w-12" src={logo.img} alt={logo.nombre} />
+        ))}
+        {logos.map((logo) => (
+          <img class="w-12 h-auto min-w-12" src={logo.img} alt={logo.nombre} />
+        ))}
+      </div>
+    </div>
+  ) : (
+    <div class="relative px-8 m-auto max-w-[600px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-gradient-to-r before:from-gray-900 before:via-transparent before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-gradient-to-r after:from-gray-900 after:via-transparent">
+      <div class="animate-infinite-slider flex gap-6">
+        {logos.map((logo) => (
+          <img class="w-12 h-auto max-w-12" src={logo.img} alt={logo.nombre} />
+        ))}
+        {logos.map((logo) => (
+          <img class="w-12 h-auto min-w-12" src={logo.img} alt={logo.nombre} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+<style>
+  /* slider hacia la izquierda */
+  .animate-infinite-slider {
+    animation: infinite 25s linear infinite;
+  }
+
+  @keyframes infinite {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-48px * 15 + -24px * 15));
+    }
+  }
+  /* translateX(calc(-48px * 15 + -24px * 15)); esto multiplica el ancho de los logos * la cantidad 
+  y luego el gap por la cantidad de logos, porque no por 14? por que necestamos empatar el inicio de un nuevo ciclo con el final del anterior
+
+  */
+
+  /* slider hacia la derecha */
+  .animate-infinite-slider-to-right {
+    animation: infiniteToRight 25s linear infinite;
+  }
+
+  @keyframes infiniteToRight {
+    0% {
+      transform: translateX(calc(-48px * 15 + -24px * 15));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+</style>

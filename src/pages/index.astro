@@ -5,7 +5,7 @@ import Hero from "../sections/Hero.astro";
 import Background1 from "../components/Background1.astro";
 import About from "../sections/About.astro";
 import Lottie from "../components/Lottie.astro";
-import { HeaderData, HeroData, AboutData, ExperienceData, ProjectsData, SkillsData, ContactData, FooterData, TestimonialsData } from "../data/portafolio-es.ts";
+import { HeaderData, HeroData, AboutData, ExperienceData, ProjectsData, SkillsData, ContactData, FooterData, TestimonialsData, EducationData } from "../data/portafolio-en.ts";
 import Experiencia from "../sections/Experience.astro";
 import Projects from "../sections/Projects.astro";
 import Skills from "../sections/Skills.astro";
@@ -16,19 +16,19 @@ import Education from "../sections/Education.astro";
 import Testimonial from "../sections/Testimonial.astro";
 ---
 
-<Layout title="Daniel Amado - Portafolio" lang="es">
+<Layout title="Daniel Amado - Portfolio" lang="en">
   <Background1 />
   <Header headerData={HeaderData} />
-  <main class="overflow-clip p-3 lg:p-0">
+  <main class="overflow-clip p-3 xl:p-0">
     <div class="max-w-[1200px] mx-auto">
-      <Hero heroData={HeroData} />
+      <Hero heroData={HeroData} logos={SkillsData.skills} />
       <!-- <Lottie /> -->
       <About aboutData={AboutData} />
       <Experiencia experienceData={ExperienceData} />
       <Projects projectsData={ProjectsData} />
       <Skills skillsData={SkillsData} />
       <Testimonial testimonialData={TestimonialsData} />
-      <Education />
+      <Education educationData={EducationData} />
       <Contact contactData={ContactData}  />
       <Footer footerData={FooterData} />
     </div>

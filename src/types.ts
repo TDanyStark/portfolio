@@ -83,6 +83,19 @@ export interface TestimonialsDataType {
   }[];
 }
 
+export interface EducationDataType {
+  etiqueta: string;
+  titulo: string;
+  tituloResaltado: string;
+  parrafo: string;
+  estudios: {
+    titulo: string;
+    institucion: string;
+    logo: string;
+    fecha: string;
+  }[];
+}
+
 export interface ContactDataType {
   copy: string;
   callToAction: string;

@@ -1,4 +1,4 @@
-import type { HeaderDataType, HeroDataType, AboutDataType, ExperienceDataType, ProjectsDataType, SkillsDataType, ContactDataType, FooterDataType, TestimonialsDataType } from "../types";
+import type { HeaderDataType, HeroDataType, AboutDataType, ExperienceDataType, ProjectsDataType, SkillsDataType, ContactDataType, FooterDataType, TestimonialsDataType, EducationDataType  } from "../types";
 
 export const HeaderData: HeaderDataType = {
   logoName: "Daniel Amado",
@@ -257,15 +257,15 @@ export const SkillsData: SkillsDataType = {
 
 export const TestimonialsData: TestimonialsDataType = {
   etiqueta: "Testimonios",
-  titulo: "Profesionales que",
-  tituloResaltado: "Admiro",
+  titulo: "Referencias",
+  tituloResaltado: "Personales",
   parrafo: "Estas son algunas de las opiniones de profesionales con los que he tenido el gusto de colaborar.",
   testimonios: [
     {
       nombre: "Camilo Pabon",
       cargo: "Desarrollador backend Java",
       empresa: "Wecall",
-      comentario: "Daniel es un excelente profesional, siempre dispuesto a ayudar y aportar soluciones creativas a los problemas. Su conocimiento en frontend es impresionante y su capacidad para trabajar en equipo es excepcional.",
+      comentario: "Daniel es un profesional muy dedicado en su trabajo, lo que no sabe lo investiga, lo que no encuentra se lo inventa. Siempre procura entregar un producto impecable, tiene gran gusto por el diseño, es perseverante y con su constancia ha podido llegar muy lejos y sé que seguirá superándose cada vez más.",
       img: "/img/portafolio/testimonials/camilo.webp",
       linkLinkedIn: "https://www.linkedin.com/in/jcpbo/"
     },
@@ -286,6 +286,21 @@ export const TestimonialsData: TestimonialsDataType = {
       linkLinkedIn: "https://www.linkedin.com/in/sandy-barón-701a4a129/"
     }
   ],
+}
+
+export const EducationData: EducationDataType = {
+  etiqueta: "Educación",
+  titulo: "Formación",
+  tituloResaltado: "Académica",
+  parrafo: "Mi formación académica ha sido fundamental para mi desarrollo profesional y ha sido la base de mi carrera en la industria.",
+  estudios:[
+    {
+      titulo: "Ingeniería de Sistemas",
+      institucion: "UNIREMINGTON",
+      logo: "img/portafolio/education/uniremington.webp",
+      fecha: "2015 - 2018",
+    },
+  ]
 }
 
 export const ContactData: ContactDataType = {

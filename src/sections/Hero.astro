@@ -1,15 +1,17 @@
 ---
-import type { HeroDataType } from "../types.ts";
+import type { HeroDataType, SkillsDataType } from "../types.ts";
 export interface Props {
   heroData: HeroDataType;
+  logos: SkillsDataType["skills"];
 }
 
-const { heroData } = Astro.props;
+const { heroData, logos } = Astro.props;
 
 import BotonPrincipal from "../components/BotonPrincipal.astro";
 import Botonsegundario from "../components/Botonsegundario.astro";
 import Ribbow from "../components/Ribbow.astro";
 import Parrafo from "../components/Parrafo.astro";
+import SliderSkills from "../components/SliderSkills.astro";
 ---
 
 <section id="hero" class="py-40">
@@ -89,6 +91,11 @@ import Parrafo from "../components/Parrafo.astro";
           </svg>
         </Botonsegundario>
       </div>
+    </div>
+    <div class="mt-24 space-y-8">
+      <SliderSkills logos={logos} />
+      <SliderSkills logos={logos} reversed={true} />
+
     </div>
   </div>
 </section>
