@@ -2,9 +2,10 @@
 import type { ProjectsDataType } from "../types.ts";
 export interface Props {
   projectsData: ProjectsDataType;
+  idioma: string;
 }
 
-const { projectsData } = Astro.props;
+const { projectsData, idioma } = Astro.props;
 
 import Parrafo from "../components/Parrafo.astro";
 import Ribbow from "../components/Ribbow.astro";
@@ -34,12 +35,16 @@ import ItemProject from "../components/ItemProject.astro";
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
         {
           projectsData.proyectos.map((proyecto) => (
-            <ItemProject proyectos={proyecto} />
+            <ItemProject proyectos={proyecto} idioma={idioma} />
           ))
         }
       </div>
       <div class="flex mt-12">
-        <button id="ver-mas" class="mx-auto text-xl bg-gradient-to-r from-blue-900 to-azul-cielo text-white py-1 px-4 rounded-full">Ver más</button>
+        <button id="ver-mas" class="mx-auto text-lg font-normal border border-azul-cielo text-white py-1 px-4 rounded-full">
+          {
+            idioma === "es" ? "Ver más" : "See more"
+          }
+          </button>
       </div>
     </div>
   </div>

@@ -8,9 +8,16 @@ export interface Props {
     link?: string;
     LinkGithub?: string;
   };
+  idioma: string;
 }
 
-const { proyectos } = Astro.props;
+const { proyectos, idioma } = Astro.props;
+
+const textButton = idioma === "es" ? "Ver" : "See";
+const textLabelGithub = idioma === "es" ? "Ver en Github" : "View on Github";
+const textLabelLink = idioma === "es" ? "Ver proyecto" : "View project";
+const contact = idioma === "es" ? "Contactar" : "Contact";
+
 
 import Parrafo from "./Parrafo.astro";
 ---
@@ -19,13 +26,13 @@ import Parrafo from "./Parrafo.astro";
   class="card-project flex flex-col border overflow-clip rounded-lg shadow bg-gray-800/70 border-gray-700/50 hover:border-azul-cielo transition-all group"
 >
   <div class="relative">
-    <a target="_blank" rel="noopener noreferrer" class="block" href={proyectos.link}>
+    <a target="_blank" rel="noopener noreferrer" class="block" href={proyectos.link} aria-label={textLabelLink}>
       <img width="361px" height="203px" class="aspect-video w-full h-full object-cover" loading="lazy" src={"/" + proyectos.img} alt={"Imagen de " + proyectos.titulo} />
     </a>
   </div>
   <div class="p-4 h-full flex flex-col justify-between">
     <div>
-      <a target="_blank" rel="noopener noreferrer" href={proyectos.link}>
+      <a target="_blank" rel="noopener noreferrer" href={proyectos.link} aria-label={textLabelLink}>
         <h3
           class="text-2xl font-bold tracking-tight text-white"
         >
@@ -58,7 +65,7 @@ import Parrafo from "./Parrafo.astro";
           <a
             href={proyectos.LinkGithub}
             target="_blank" rel="noopener noreferrer"
-            aria-label="Ver en Github"
+            aria-label={textLabelGithub}
             class="border border-slate-200 p-2.5 rounded-full hover:border-azul-cielo hover:text-azul-cielo transition-all"
           >
             <svg
@@ -84,7 +91,9 @@ import Parrafo from "./Parrafo.astro";
         rel="noopener noreferrer"
         class="inline-flex text-lg font-semibold items-center rounded-full py-2 px-6 bg-gradient-to-r from-blue-900 to-azul-cielo text-white"
       >
-        {proyectos.link ? "Ver" : "Contactar"}
+        {
+          proyectos.link ? textButton : contact
+        }
         <svg
           class="h-5 w-5 transition translate-x-1 group-hover:translate-x-1.5"
           viewBox="0 0 20 20"

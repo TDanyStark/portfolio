@@ -266,7 +266,7 @@ export const TestimonialsData: TestimonialsDataType = {
       cargo: "Desarrollador backend Java",
       empresa: "Wecall",
       comentario: "Daniel es un profesional muy dedicado en su trabajo, lo que no sabe lo investiga, lo que no encuentra se lo inventa. Siempre procura entregar un producto impecable, tiene gran gusto por el diseño, es perseverante y con su constancia ha podido llegar muy lejos y sé que seguirá superándose cada vez más.",
-      img: "/img/portafolio/testimonials/camilo.webp",
+      img: "img/portafolio/testimonials/camilo.webp",
       linkLinkedIn: "https://www.linkedin.com/in/jcpbo/"
     },
     {
@@ -274,7 +274,7 @@ export const TestimonialsData: TestimonialsDataType = {
       cargo: "Desarrollador mid-level frontend",
       empresa: "Globant",
       comentario: "Sus ganas de avanzar y sus grandes talentos lo han hecho llegar muy lejos. Sus principios y habilidades blandas lo hacen sobresalir siempre y da gusto participar en sus reuniones y revisar su código de gran calidad.",
-      img: "/img/portafolio/testimonials/joseph.webp",
+      img: "img/portafolio/testimonials/joseph.webp",
       linkLinkedIn: "https://www.linkedin.com/in/joseth-guerrero-b267975b/"
     },
     {
@@ -282,7 +282,7 @@ export const TestimonialsData: TestimonialsDataType = {
       cargo: "CEO",
       empresa: "Market Support",
       comentario: "Daniel es un excelente profesional, siempre dispuesto a ayudar y aportar soluciones creativas a los problemas. Su conocimiento en frontend es impresionante y su capacidad para trabajar en equipo es excepcional.",
-      img: "/img/portafolio/testimonials/sandy.webp",
+      img: "img/portafolio/testimonials/sandy.webp",
       linkLinkedIn: "https://www.linkedin.com/in/sandy-barón-701a4a129/"
     }
   ],

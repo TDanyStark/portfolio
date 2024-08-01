@@ -13,7 +13,7 @@ const {estudio} = Astro.props;
 ---
 <article class="flex gap-4 items-center py-4 px-4 rounded-lg border bg-gray-800/70 border-gray-700/50 hover:border-azul-cielo transition-all">
   <div>
-    <img width="80px" height="80px" class="max-w-full h-auto" src={estudio.logo} alt={estudio.titulo} />
+    <img width="80px" height="80px" class="max-w-full h-auto" src={"/" +estudio.logo} alt={estudio.titulo} />
   </div>
   <div>
     <h2 class="text-xl font-semibold">

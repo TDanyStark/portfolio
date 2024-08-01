@@ -23,14 +23,14 @@ import Titulo from "../components/Titulo.astro";
       
       <div class="min-w-56 aspect-[3/4] mx-auto lg:mx-0 card relative border border-slate-700 rounded-3xl overflow-hidden group">
         <div
-          class="absolute inset-0 w-full h-full grayscale-[20%] group-hover:scale-110 group-hover:grayscale-0 duration-300"
+          class="absolute inset-0 w-full h-full grayscale-0 lg:grayscale-[10%] group-hover:scale-110 group-hover:grayscale-0 duration-300"
           style={`background-image: url('${"/"+aboutData.rutaFoto}'); background-size: cover; background-position: center;`}
         >
         </div>
-        <div class="absolute inset-0 w-full h-full p-4 flex">
-          <div class="mt-auto">
+        <div class="absolute inset-0 w-full h-full p-2 flex">
+          <div class="mt-auto mx-auto">
             <h2
-              class="inline-block bg-slate-100 text-black font-bold px-2 text-xl"
+              class="inline-block bg-azul-cielo/10 text-white font-bold px-4 py-1 text-xl rounded-full backdrop-blur-xl"
             >
               {aboutData.nombre}
             </h2>

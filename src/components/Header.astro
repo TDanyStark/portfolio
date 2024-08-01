@@ -86,15 +86,16 @@ const { headerData } = Astro.props;
     </div>
   </nav>
   <div class="flex md:hidden text-white flex-1 lg:flex justify-center lg:justify-end order-2 lg:order-3">
-    <div class="w-10 h-auto">
+    <div>
       {
         headerData.idioma === "es" ? (
-          <a class="block max-w-full" href="/en">
+          <a class="flex items-center max-w-full gap-1" href="/en">
+            <span class="hidden lg:block text-gray-300 text-sm">Inglés</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 50 30"
-              width="80"
-              height="32"
+              width="40"
+              height="16"
               class="max-w-full"
             >
               <clipPath id="t">
@@ -117,11 +118,12 @@ const { headerData } = Astro.props;
             </svg>
           </a>
         ) : (
-          <a class="block max-w-full" href="/">
+          <a class="max-w-full flex items-center gap-1" href="/">
+            <span class="hidden lg:block text-gray-300 text-sm">Spanish</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="80"
-              height="32"
+              width="40"
+              height="16"
               viewBox="0 0 900 600"
               class="max-w-full"
             >
