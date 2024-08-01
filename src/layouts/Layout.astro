@@ -16,14 +16,14 @@ const { title, lang } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<meta name="author" content="Daniel Amado" />
 		<title>{title}</title>
-		<meta name="theme-color" content="#0B1120">
-		<meta name="description" content="Daniel Amado, desarrollador fullstack, crea soluciones web innovadoras y eficientes, destacando en frontend y backend con pasión por la tecnología y el código limpio." />
-		<link rel="preload" href="img/bg.webp" as="image">
+		<meta name="theme-color" content="#111827">
+		<meta name="description" content={lang === "es" ? "Desarrollador fullstack con 3 años en IT. Apasionado por el frontend, backend, automatización y AI. Resuelve problemas con soluciones creativas y eficientes." : "Fullstack developer with 3 years in IT. Passionate about frontend, backend, automation, and AI. Solves problems with creative and efficient solutions."} />
+		<link rel="preload" href="/img/bg.webp" as="image">
 
 		<!-- og-image -->
-		<meta property="og:image" content="https://indigo-skunk-882856.hostingersite.com/img/og_daniel.jpg" />
+		<meta property="og:image" content={`https://indigo-skunk-882856.hostingersite.com/img/og_daniel_${lang}.jpg`} />
 	</head>
-	<body class="bg-gray-900 font-sans text-white min-h-screen scroll-beha">
+	<body class="bg-gray-900 font-sans text-white min-h-screen">
 		<slot />
 	</body>
 </html>
