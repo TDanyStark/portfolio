@@ -21,7 +21,7 @@ export const HeroData: HeroDataType = {
   perfil: "Desarrollador Fullstack",
   LinkedIn: "https://www.linkedin.com/in/danielamadov/",
   GitHub: "https://github.com/TDanyStark",
-  CV: "cv/CV_DANIEL_AMADO.pdf",
+  CV: "cv/cv_daniel_amado_es.pdf",
 };
 
 export const AboutData: AboutDataType = {
@@ -29,7 +29,7 @@ export const AboutData: AboutDataType = {
   titulo: "¿Quién es",
   tituloResaltado: "Daniel?",
   nombre: "Daniel Amado",
-  rutaFoto: "img/Team-01.jpg",
+  rutaFoto: "img/daniel.webp",
   parrafo: "<strong>Soy un apasionado por la tecnología</strong> y siempre al día con las últimas tendencias. Me encanta resolver problemas y encontrar soluciones creativas. Tengo <strong>1 año de experiencia como docente</strong> y <strong>3 años en el sector IT y de programación</strong>, donde he podido interactuar en todas las etapas de un desarrollo web, desde el <strong>frontend</strong>, que es mi pasión, hasta el backend y el despliegue. Siempre busco <strong>automatizar procesos a través de la programación</strong>, optimizando operaciones y mejorando la productividad. Además, <strong>utilizo la inteligencia artificial en los procesos donde es útil</strong> para ser altamente eficiente en áreas clave. Me encanta colaborar y aprender continuamente, enfrentando desafíos que me permitan aplicar y expandir mis habilidades para <strong>impulsar la eficiencia y el rendimiento en cada proyecto</strong> que emprendo."
 };
 
@@ -45,13 +45,13 @@ export const ExperienceData: ExperienceDataType = {
       empresa: "Market Support",
       fecha: "Feb/2023 - Actualidad",
       descripcion: "Lideré y desarrollé múltiples páginas y aplicaciones web para diversos clientes, incluyendo un laboratorio de renombre mundial. Implementé procesos de automatización mediante programación, mejorando la eficiencia operativa. Además, lideré un equipo técnico en transmisiones.",
-      verMas: "https://docs.google.com/document/d/1lTWbaeJLClDzqe_V9rWWpdHz87GLN6epsnL2PJFRrLw/edit#heading=h.s1bej6q54ifz"
+      verMas: "cv/cv_daniel_amado_es.pdf"
     },
     {
       cargo: "Instructor de Programación",
       empresa: "SENA",
       fecha: "Nov/2022 - Dic/2022",
-      descripcion: "Enseñé programación en Python a jóvenes, fomentando la innovación y el pensamiento disruptivo para completar proyectos de área con éxito."
+      descripcion: "Impartí conocimientos en Python a jóvenes, fomentando la innovación y el pensamiento disruptivo para la exitosa culminación de proyectos en el área."
     },
     {
       cargo: "Docente de programación",
@@ -62,7 +62,7 @@ export const ExperienceData: ExperienceDataType = {
     {
       cargo: "Desarrollador Web",
       empresa: "Innovacenter SAS",
-      fecha: "Oct/2020 - Feb/2023",
+      fecha: "Ene/2019 - Feb/2022",
       descripcion: "Desarrollé un sistema contable con manejo de inventario y ventas, y lideré proyectos de creación de páginas web para clientes de la organización."
     },
   ]

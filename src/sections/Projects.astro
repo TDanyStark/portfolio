@@ -31,15 +31,52 @@ import ItemProject from "../components/ItemProject.astro";
       <Parrafo parrafo={projectsData.parrafo} />
     </div>
     <div class="mt-12 md:mt-20">
-      <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
         {
           projectsData.proyectos.map((proyecto) => (
             <ItemProject proyectos={proyecto} />
           ))
         }
       </div>
+      <div class="flex mt-12">
+        <button id="ver-mas" class="mx-auto text-xl bg-gradient-to-r from-blue-900 to-azul-cielo text-white py-1 px-4 rounded-full">Ver más</button>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  let ItemsAMostrar = 6;
+  let botonVerMas = document.querySelector("#ver-mas");
+
+  const mostrarProjects = () => {
+    ItemsAMostrar += 3;
+    const proyectos = document.querySelectorAll(".card-project");
+    proyectos.forEach((proyecto, index) => {
+      if (index < ItemsAMostrar) {
+        proyecto.classList.remove("hidden");
+        proyecto.classList.add("flex");
+      }
+    });
+    if (ItemsAMostrar >= proyectos.length) {
+      botonVerMas?.classList.add("hidden");
+    }
+  };
+
+  const ocultarProjects = () => {
+    const proyectos = document.querySelectorAll(".card-project");
+    proyectos.forEach((proyecto, index) => {
+      if (index >= ItemsAMostrar) {
+        proyecto.classList.add("hidden");
+        proyecto.classList.remove("flex");
+      }
+    });
+  };
+
+  botonVerMas?.addEventListener("click", mostrarProjects);
+  
+  ocultarProjects();
+
+</script>
 
 

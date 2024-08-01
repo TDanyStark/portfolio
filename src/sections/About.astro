@@ -12,17 +12,22 @@ import Titulo from "../components/Titulo.astro";
 ---
 
 <section id="about" class="py-36 lg:py-60">
-  <div class="max-w-[1000px] mx-auto" id="about-info">
-    <div class="flex flex-col lg:flex-row gap-8">
-      <div
-        class="min-w-64 mx-auto lg:mx-0 card relative aspect-custom border-2 border-slate-700 rounded-3xl overflow-hidden"
-      >
+  <div class="max-w-[950px] mx-auto" id="about-info">
+    <div>
+      <div class="flex flex-col items-center">
+        <Ribbow>{aboutData.etiqueta}</Ribbow>
+        <Titulo titulo={aboutData.titulo} resaltar={aboutData.tituloResaltado} />
+      </div>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-8 mt-8 md:mt-16">
+      
+      <div class="min-w-56 aspect-[3/4] mx-auto lg:mx-0 card relative border border-slate-700 rounded-3xl overflow-hidden group">
         <div
-          class="absolute inset-0 w-full h-full"
+          class="absolute inset-0 w-full h-full grayscale-[20%] group-hover:scale-110 group-hover:grayscale-0 duration-300"
           style={`background-image: url('${"/"+aboutData.rutaFoto}'); background-size: cover; background-position: center;`}
         >
         </div>
-        <div class="absolute inset-0 w-full h-full p-6 flex">
+        <div class="absolute inset-0 w-full h-full p-4 flex">
           <div class="mt-auto">
             <h2
               class="inline-block bg-slate-100 text-black font-bold px-2 text-xl"
@@ -33,10 +38,6 @@ import Titulo from "../components/Titulo.astro";
         </div>
       </div>
       <div class="flex flex-col items-center lg:items-start justify-center space-y-8">
-        <div class="flex flex-col items-center lg:items-start">
-          <Ribbow>{aboutData.etiqueta}</Ribbow>
-          <Titulo titulo={aboutData.titulo} resaltar={aboutData.tituloResaltado} />
-        </div>
         <Parrafo parrafo={aboutData.parrafo}/>
       </div>
     </div>

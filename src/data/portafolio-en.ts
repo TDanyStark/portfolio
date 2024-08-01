@@ -21,7 +21,7 @@ export const HeroData: HeroDataType = {
   perfil: "Fullstack Developer",
   LinkedIn: "https://www.linkedin.com/in/danielamadov/",
   GitHub: "https://github.com/TDanyStark",
-  CV: "cv/CV_DANIEL_AMADO.pdf",
+  CV: "cv/cv_daniel_amado_en.pdf",
 };
 
 export const AboutData: AboutDataType = {
@@ -29,7 +29,7 @@ export const AboutData: AboutDataType = {
   titulo: "Who is",
   tituloResaltado: "Daniel?",
   nombre: "Daniel Amado",
-  rutaFoto: "img/Team-01.jpg",
+  rutaFoto: "img/daniel.webp",
   parrafo: "<strong>I am passionate about technology</strong> and always up-to-date with the latest trends. I love solving problems and finding creative solutions. I have <strong>1 year of experience as a teacher</strong> and <strong>3 years in the IT and programming sector</strong>, where I have been involved in all stages of web development, from <strong>frontend</strong>, which is my passion, to backend and deployment. I always seek to <strong>automate processes through programming</strong>, optimizing operations and improving productivity. Additionally, <strong>I use artificial intelligence in processes where it's useful</strong> to be highly efficient in key areas. I love collaborating and continuously learning, facing challenges that allow me to apply and expand my skills to <strong>drive efficiency and performance in every project</strong> I undertake."
 };
 
@@ -45,13 +45,13 @@ export const ExperienceData: ExperienceDataType = {
       empresa: "Market Support",
       fecha: "Feb/2023 - Present",
       descripcion: "Led and developed multiple web pages and applications for various clients, including a renowned global laboratory. Implemented automation processes through programming, improving operational efficiency. Additionally, led a technical team in broadcasts.",
-      verMas: "https://docs.google.com/document/d/1lTWbaeJLClDzqe_V9rWWpdHz87GLN6epsnL2PJFRrLw/edit#heading=h.s1bej6q54ifz"
+      verMas: "cv/cv_daniel_amado_en.pdf"
     },
     {
       cargo: "Programming Instructor",
       empresa: "SENA",
       fecha: "Nov/2022 - Dec/2022",
-      descripcion: "Taught Python programming to young people, fostering innovation and disruptive thinking to successfully complete area projects."
+      descripcion: "I imparted knowledge in Python to young individuals, fostering innovation and disruptive thinking for the successful completion of projects in the area."
     },
     {
       cargo: "Programming Teacher",
@@ -62,7 +62,7 @@ export const ExperienceData: ExperienceDataType = {
     {
       cargo: "Web Developer",
       empresa: "Innovacenter SAS",
-      fecha: "Oct/2020 - Feb/2023",
+      fecha: "Jan/2019 - Feb/2023",
       descripcion: "Developed an accounting system with inventory and sales management, and led web page creation projects for the organization's clients."
     },
   ]
