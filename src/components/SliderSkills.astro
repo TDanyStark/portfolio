@@ -9,6 +9,10 @@ export interface Props {
 const { logos, reversed = false } = Astro.props;
 
 const logosDesordernados = [...logos].sort(() => Math.random() - 0.5);
+
+const lengthLogos = logosDesordernados.length;
+const segundos = String(lengthLogos * 1.5)+"s";
+console.log(lengthLogos, segundos);
 ---
 
 <div
@@ -40,10 +44,10 @@ const logosDesordernados = [...logos].sort(() => Math.random() - 0.5);
   </div>
 </div>
 
-<style>
+<style define:vars={{lengthLogos, segundos}}>
   /* slider hacia la izquierda */
   .animate-infinite-slider {
-    animation: infinite 25s linear infinite;
+    animation: infinite var(--segundos) linear infinite;
   }
 
   @keyframes infinite {
@@ -51,7 +55,7 @@ const logosDesordernados = [...logos].sort(() => Math.random() - 0.5);
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-48px * 15 + -24px * 15));
+      transform: translateX(calc(-48px * var(--lengthLogos) + -24px * var(--lengthLogos)));
     }
   }
   /* translateX(calc(-48px * 15 + -24px * 15)); esto multiplica el ancho de los logos * la cantidad 
@@ -61,12 +65,12 @@ const logosDesordernados = [...logos].sort(() => Math.random() - 0.5);
 
   /* slider hacia la derecha */
   .animate-infinite-slider-to-right {
-    animation: infiniteToRight 25s linear infinite;
+    animation: infiniteToRight var(--segundos) linear infinite;
   }
 
   @keyframes infiniteToRight {
     0% {
-      transform: translateX(calc(-48px * 15 + -24px * 15));
+      transform: translateX(calc(-48px * var(--lengthLogos) + -24px * var(--lengthLogos)));
     }
     100% {
       transform: translateX(0);

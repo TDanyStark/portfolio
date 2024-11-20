@@ -75,6 +75,14 @@ export const ProjectsData: ProjectsDataType = {
   parrafo: "Estos son algunos de los proyectos recientes que han sido fundamentales en mi desarrollo profesional y han contribuido significativamente a mi crecimiento en la industria.",
   proyectos: [
     {
+      img: "img/portafolio/projects/laberinto.webp",
+      titulo: "Laberinto elevando el estándar",
+      descripcion: "Laberinto interactivo donde cada paso depende de tus respuestas correctas. Responde todas las preguntas sin errores para completar el desafío y activar una animada celebración con confetti.",
+      tecnologias: ["Astro JS", "React", "Tailwind"],
+      link: "https://market-support.com/apps/abbott/laberinto-klaricid/",
+      LinkGithub: "https://github.com/TDanyStark/laberinto-klaricid/"
+    },
+    {
       img: "img/portafolio/projects/calculadora.webp",
       titulo: "TiroCare Control",
       descripcion: "Calculadora de dosis de un medicamento para pacientes con hipotiroidismo.",
@@ -125,9 +133,23 @@ export const ProjectsData: ProjectsDataType = {
     {
       img: "img/portafolio/projects/market.webp",
       titulo: "Market Support",
-      descripcion: "Pagina web de la empresa Market Support.",
+      descripcion: "Pagina web de la empresa Market Support (Multilingüe).",
       tecnologias: ["WordPress", "CSS"],
       link: "https://market-support.com",
+    },
+    {
+      img: "img/portafolio/projects/norat.webp",
+      titulo: "Spa Norat",
+      descripcion: "Pagina web de la empresa Spa Norat.",
+      tecnologias: ["WordPress", "Elementor", "CSS"],
+      link: "https://spanorat.com/inicio/",
+    },
+    {
+      img: "img/portafolio/projects/ctoxlabs.webp",
+      titulo: "CTOxLabs",
+      descripcion: "Pagina web de la empresa CTOxLabs (Multilingüe).",
+      tecnologias: ["WordPress", "Elementor", "CSS"],
+      link: "https://ctoxlabs.com/es-es/inicio/",
     },
     {
       img: "img/portafolio/projects/bbm.webp",
@@ -201,10 +223,6 @@ export const SkillsData: SkillsDataType = {
       img: "img/portafolio/skills/js.svg",
     },
     {
-      nombre: "Astro JS",
-      img: "img/portafolio/skills/astro.svg",
-    },
-    {
       nombre: "HTML",
       img: "img/portafolio/skills/html.svg",
     },
@@ -213,12 +231,28 @@ export const SkillsData: SkillsDataType = {
       img: "img/portafolio/skills/CSS.svg",
     },
     {
+      nombre: "Astro JS",
+      img: "img/portafolio/skills/astro.svg",
+    },
+    {
+      nombre: "Next JS",
+      img: "img/portafolio/skills/nextjs.svg",
+    },
+    {
       nombre: "PHP",
       img: "img/portafolio/skills/php.svg",
     },
     {
       nombre: "Code Igniter",
       img: "img/portafolio/skills/codeigniter.svg",
+    },
+    {
+      nombre: "MySQL",
+      img: "img/portafolio/skills/mysql.svg",
+    },
+    {
+      nombre: "PostgreSQL",
+      img: "img/portafolio/skills/postgres.svg",
     },
     {
       nombre: "Python",
@@ -233,6 +267,10 @@ export const SkillsData: SkillsDataType = {
       img: "img/portafolio/skills/vue.svg",
     },
     {
+      nombre: "Sass",
+      img: "img/portafolio/skills/sass.svg",
+    },
+    {
       nombre: "Git",
       img: "img/portafolio/skills/Git.svg",
     },
@@ -243,6 +281,14 @@ export const SkillsData: SkillsDataType = {
     {
       nombre: "WordPress",
       img: "img/portafolio/skills/wordpress.svg",
+    },
+    {
+      nombre: "Elementor",
+      img: "img/portafolio/skills/elementor.svg",
+    },
+    {
+      nombre: "Learndash",
+      img: "img/portafolio/skills/learndash.svg",
     },
     {
       nombre: "Woocommerce",
