@@ -5,10 +5,10 @@ export const HeaderData: HeaderDataType = {
   logoURL: "img/logowhite.webp",
   idioma: "es",
   navLinks: [
-    { text: "Acerca", url: "#about" },
     { text: "Experiencia", url: "#experience" },
     { text: "Proyectos", url: "#projects" },
     { text: "Skills", url: "#skills" },
+    { text: "Acerca", url: "#about" },
     { text: "Contácteme", url: "#contact" },
   ],
 };

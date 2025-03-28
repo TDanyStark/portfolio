@@ -13,37 +13,38 @@ import ItemExperience from "../components/ItemExperience.astro";
 ---
 
 <section id="experience" class="spacing-md">
-  <div class="blur-3xl relative pointer-events-none">
-    <div
-      class="absolute left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-r from-green-400 from-0% via-cyan-500 to-blue-500 opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-      style="clip-path: polygon(37% 53%, 12% 34%, 0 27%, 0 78%, 19% 94%, 61% 91%, 87% 91%, 97% 69%, 98% 46%, 59% 32%);"
-    >
-    </div>
-  </div>
-  <div class="relative">
-    <div class="flex flex-col items-center space-y-6">
-      <div class="flex flex-col items-center">
-        <Ribbow>{experienceData.etiqueta}</Ribbow>
-        <Titulo
-          titulo={experienceData.titulo}
-          resaltar={experienceData.tituloResaltado}
-        />
+  <div class="fade-in">
+    <div class="blur-3xl relative pointer-events-none">
+      <div
+        class="absolute left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-r from-green-400 from-0% via-cyan-500 to-blue-500 opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+        style="clip-path: polygon(37% 53%, 12% 34%, 0 27%, 0 78%, 19% 94%, 61% 91%, 87% 91%, 97% 69%, 98% 46%, 59% 32%);"
+      >
       </div>
-      <Parrafo parrafo={experienceData.parrafo} />
     </div>
-    <div class="mt-12 md:mt-20">
-      <div class="max-w-[1100px] mx-auto">
-        <div
-          class="contenedor-experiencia space-y-8 relative before:absolute before:inset-0 before:ml-3.5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[1px] before:bg-gradient-to-b before:from-transparent before:via-azul-cielo before:to-transparent"
-        >
-          {
-            experienceData.experiencia.map((experiencia) => (
-              <ItemExperience experiencia={experiencia} />
-            ))
-          }
+    <div class="relative">
+      <div class="flex flex-col items-center space-y-6">
+        <div class="flex flex-col items-center">
+          <Ribbow>{experienceData.etiqueta}</Ribbow>
+          <Titulo
+            titulo={experienceData.titulo}
+            resaltar={experienceData.tituloResaltado}
+          />
+        </div>
+        <Parrafo parrafo={experienceData.parrafo} />
+      </div>
+      <div class="mt-12 md:mt-20">
+        <div class="max-w-[1100px] mx-auto">
+          <div
+            class="contenedor-experiencia space-y-8 relative before:absolute before:inset-0 before:ml-3.5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[1px] before:bg-gradient-to-b before:from-transparent before:via-azul-cielo before:to-transparent"
+          >
+            {
+              experienceData.experiencia.map((experiencia) => (
+                <ItemExperience experiencia={experiencia} />
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
