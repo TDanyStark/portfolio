@@ -16,8 +16,8 @@ export const HeaderData: HeaderDataType = {
 // Exported data
 export const HeroData: HeroDataType = {
   estado: "Open to new opportunities!",
-  saludo: "Hello, I am",
-  nombre: "Daniel",
+  saludo: "Hello, I'm",
+  nombre: "Daniel Amado",
   perfil: "Fullstack Developer",
   LinkedIn: "https://www.linkedin.com/in/danielamadov/",
   GitHub: "https://github.com/TDanyStark",

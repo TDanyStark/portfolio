@@ -14,7 +14,6 @@ const { title, lang } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
 		<meta name="author" content="Daniel Amado" />
 		<title>{title}</title>
 		<meta name="theme-color" content="#111827">
@@ -28,3 +27,22 @@ const { title, lang } = Astro.props;
 		<slot />
 	</body>
 </html>
+
+<style is:global>
+  .fade-in {
+    animation: show linear both;
+    animation-timeline: view();
+    animation-range: entry 15% cover 20%;
+  }
+
+  @keyframes show {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
