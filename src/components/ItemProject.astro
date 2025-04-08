@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  proyectos: {
+  proyecto: {
     img: string;
     titulo: string;
     descripcion: string;
@@ -11,7 +11,7 @@ export interface Props {
   idioma: string;
 }
 
-const { proyectos, idioma } = Astro.props;
+const { proyecto, idioma } = Astro.props;
 
 const textButton = idioma === "es" ? "Ver" : "See";
 const textLabelGithub = idioma === "es" ? "Ver en Github" : "View on Github";
@@ -26,23 +26,23 @@ import Parrafo from "./Parrafo.astro";
   class="card-project flex flex-col border overflow-clip rounded-lg shadow bg-gray-800/70 border-gray-700/50 hover:border-azul-cielo transition-all group"
 >
   <div class="relative">
-    <a target="_blank" rel="noopener noreferrer" class="block" href={proyectos.link} aria-label={textLabelLink}>
-      <img width="361px" height="203px" class="aspect-video w-full h-full object-cover" loading="lazy" src={"/" + proyectos.img} alt={"Imagen de " + proyectos.titulo} />
+    <a target="_blank" rel="noopener noreferrer" class="block" href={proyecto.link} aria-label={textLabelLink}>
+      <img width="361px" height="203px" class="aspect-video w-full h-full object-cover" loading="lazy" src={"/" + proyecto.img} alt={"Imagen de " + proyecto.titulo} />
     </a>
   </div>
   <div class="p-4 h-full flex flex-col justify-between">
     <div>
-      <a target="_blank" rel="noopener noreferrer" href={proyectos.link} aria-label={textLabelLink}>
+      <a target="_blank" rel="noopener noreferrer" href={proyecto.link} aria-label={textLabelLink}>
         <h3
           class="text-2xl font-bold tracking-tight text-white"
         >
-          {proyectos.titulo}
+          {proyecto.titulo}
         </h3>
       </a>
       <div>
         <ul class="flex flex-wrap gap-2 my-2">
           {
-            proyectos.tecnologias.map((tecnologia) => (
+            proyecto.tecnologias.map((tecnologia) => (
               <li class="px-2 py-1 text-xs font-medium text-white bg-gray-700 rounded-lg">
                 {tecnologia}
               </li>
@@ -53,7 +53,7 @@ import Parrafo from "./Parrafo.astro";
 
       <div class="mb-3">
         <Parrafo
-          parrafo={proyectos.descripcion}
+          parrafo={proyecto.descripcion}
           size="text-base"
           color="text-gray-400"
         />
@@ -61,9 +61,9 @@ import Parrafo from "./Parrafo.astro";
     </div>
     <div class="flex items-center justify-end gap-2 mt-4">
       {
-        proyectos.LinkGithub && (
+        proyecto.LinkGithub && (
           <a
-            href={proyectos.LinkGithub}
+            href={proyecto.LinkGithub}
             target="_blank" rel="noopener noreferrer"
             aria-label={textLabelGithub}
             class="border border-slate-200 p-2.5 rounded-full hover:border-azul-cielo hover:text-azul-cielo transition-all"
@@ -86,13 +86,13 @@ import Parrafo from "./Parrafo.astro";
         )
       }
       <a
-        href={proyectos.link ? proyectos.link : "#contact"}
-        target={proyectos.link ? "_blank" : "_self"}
+        href={proyecto.link ? proyecto.link : "#contact"}
+        target={proyecto.link ? "_blank" : "_self"}
         rel="noopener noreferrer"
         class="inline-flex text-lg font-semibold items-center rounded-full py-2 px-6 bg-gradient-to-r from-blue-900 to-azul-cielo text-white"
       >
         {
-          proyectos.link ? textButton : contact
+          proyecto.link ? textButton : contact
         }
         <svg
           class="h-5 w-5 transition translate-x-1 group-hover:translate-x-1.5"
