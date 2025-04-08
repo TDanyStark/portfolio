@@ -122,7 +122,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 py-1 px-2"
+              className="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 py-1 px-2"
             >
               <ExternalLink className="w-4 h-4" />
               <span>Demo</span>
@@ -134,7 +134,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
               href={project.LinkGithub}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 py-1 px-2"
+              className="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 py-1 px-2"
             >
               <Github className="w-4 h-4" />
               <span>Github</span>
