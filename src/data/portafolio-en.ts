@@ -27,7 +27,7 @@ export const HeroData: HeroDataType = {
 export const AboutData: AboutDataType = {
   etiqueta: "About Me",
   titulo: "Who is",
-  tituloResaltado: "Daniel?",
+  tituloResaltado: "Daniel Amado?",
   nombre: "Daniel Amado",
   rutaFoto: "img/daniel.webp",
   parrafo: "<strong>I am passionate about technology</strong> and always up-to-date with the latest trends. I love solving problems and finding creative solutions. I have <strong>1 year of experience as a teacher</strong> and <strong>3 years in the IT and programming sector</strong>, where I have been involved in all stages of web development, from <strong>frontend</strong>, which is my passion, to backend and deployment. I always seek to <strong>automate processes through programming</strong>, optimizing operations and improving productivity. Additionally, <strong>I use artificial intelligence in processes where it's useful</strong> to be highly efficient in key areas. I love collaborating and continuously learning, facing challenges that allow me to apply and expand my skills to <strong>drive efficiency and performance in every project</strong> I undertake."
