@@ -10,7 +10,7 @@ const { projectsData, idioma } = Astro.props;
 import Parrafo from "../components/Parrafo.astro";
 import Ribbow from "../components/Ribbow.astro";
 import Titulo from "../components/Titulo.astro";
-import ItemProject from "../components/ItemProject.astro";
+import ProjectsSection from "../components/ProjectsSection";
 ---
 
 <section id="projects" class="spacing-md relative">
@@ -34,56 +34,11 @@ import ItemProject from "../components/ItemProject.astro";
       </div>
     </div>
     <div class="mt-12 md:mt-20">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
-        {
-          projectsData.proyectos.map((proyecto) => (
-            <ItemProject proyecto={proyecto} idioma={idioma} />
-          ))
-        }
-      </div>
-      <div class="flex mt-12">
-        <button id="ver-mas" class="mx-auto text-lg font-normal border border-azul-cielo text-white py-1 px-4 rounded-full">
-          {
-            idioma === "es" ? "Ver más" : "See more"
-          }
-          </button>
-      </div>
+      <ProjectsSection client:load projectsData={projectsData} />
     </div>
   </div>
 </section>
 
-<script>
-  let ItemsAMostrar = 6;
-  let botonVerMas = document.querySelector("#ver-mas");
 
-  const mostrarProjects = () => {
-    ItemsAMostrar += 3;
-    const proyectos = document.querySelectorAll(".card-project");
-    proyectos.forEach((proyecto, index) => {
-      if (index < ItemsAMostrar) {
-        proyecto.classList.remove("hidden");
-        proyecto.classList.add("flex");
-      }
-    });
-    if (ItemsAMostrar >= proyectos.length) {
-      botonVerMas?.classList.add("hidden");
-    }
-  };
-
-  const ocultarProjects = () => {
-    const proyectos = document.querySelectorAll(".card-project");
-    proyectos.forEach((proyecto, index) => {
-      if (index >= ItemsAMostrar) {
-        proyecto.classList.add("hidden");
-        proyecto.classList.remove("flex");
-      }
-    });
-  };
-
-  botonVerMas?.addEventListener("click", mostrarProjects);
-  
-  ocultarProjects();
-
-</script>
 
 

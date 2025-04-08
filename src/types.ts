@@ -47,14 +47,16 @@ export interface ProjectsDataType {
   titulo: string;
   tituloResaltado: string;
   parrafo: string;
-  proyectos: {
-    img: string;
-    titulo: string;
-    descripcion: string;
-    tecnologias: string[];
-    link?: string;
-    LinkGithub?: string;
-  }[];
+  proyectos: ProjectType[];
+}
+
+export type ProjectType = {
+  img: string;
+  titulo: string;
+  descripcion: string;
+  tecnologias: string[];
+  link?: string;
+  LinkGithub?: string;
 }
 
 export interface SkillsDataType {
