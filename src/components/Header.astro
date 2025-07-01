@@ -89,7 +89,7 @@ const { headerData } = Astro.props;
     <div>
       {
         headerData.idioma === "es" ? (
-          <a class="flex items-center max-w-full gap-1" href="/en">
+          <a class="flex items-center max-w-full gap-1" href="/en" aria-label="Cambiar idioma a inglés">
             <span class="hidden lg:block text-gray-300 text-sm">Inglés</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@ const { headerData } = Astro.props;
             </svg>
           </a>
         ) : (
-          <a class="max-w-full flex items-center gap-1" href="/">
+          <a class="max-w-full flex items-center gap-1" href="/" aria-label="Cambiar idioma a español">
             <span class="hidden lg:block text-gray-300 text-sm">Spanish</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
