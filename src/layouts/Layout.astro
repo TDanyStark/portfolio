@@ -1,8 +1,8 @@
 ---
-import '../css/style.css';
+import "../css/style.css";
 interface Props {
-	title: string;
-	lang: string;
+  title: string;
+  lang: string;
 }
 
 const { title, lang } = Astro.props;
@@ -10,22 +10,42 @@ const { title, lang } = Astro.props;
 
 <!doctype html>
 <html lang={lang} class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<meta name="author" content="Daniel Amado" />
-		<title>{title}</title>
-		<meta name="theme-color" content="#111827">
-		<meta name="description" content={lang === "es" ? "Desarrollador fullstack con 3 años en IT. Apasionado por el frontend, backend, automatización y AI. Resuelve problemas con soluciones creativas y eficientes." : "Fullstack developer with 3 years in IT. Passionate about frontend, backend, automation, and AI. Solves problems with creative and efficient solutions."} />
-		<link rel="preload" href="/img/bg.webp" as="image">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="author" content="Daniel Amado" />
+    <title>{title}</title>
+    <meta name="theme-color" content="#111827" />
+    <meta
+      name="description"
+      content={lang === "es"
+        ? "Desarrollador fullstack con 3 años en IT. Apasionado por el frontend, backend, automatización y AI. Resuelve problemas con soluciones creativas y eficientes."
+        : "Fullstack developer with 3 years in IT. Passionate about frontend, backend, automation, and AI. Solves problems with creative and efficient solutions."}
+    />
+    <link rel="preload" href="/img/bg.webp" as="image" />
 
-		<!-- og-image -->
-		<meta property="og:image" content={`https://indigo-skunk-882856.hostingersite.com/img/og_daniel_${lang}.jpg`} />
-	</head>
-	<body class="bg-gray-900 font-sans text-white min-h-screen">
-		<slot />
-	</body>
+    <!-- og-image -->
+    <meta
+      property="og:image"
+      content={`https://danielamado/img/og_daniel_${lang}.jpg`}
+    />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZSQT7F4XV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LZSQT7F4XV");
+    </script>
+  </head>
+  <body class="bg-gray-900 font-sans text-white min-h-screen">
+    <slot />
+  </body>
 </html>
 
 <style is:global>
