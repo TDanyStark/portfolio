@@ -24,6 +24,8 @@ export interface AboutDataType {
   nombre: string;
   rutaFoto: string;
   titulo: string;
+  altImg: string;
+  titleImg: string;
   tituloResaltado: string;
   parrafo: string;
 }
