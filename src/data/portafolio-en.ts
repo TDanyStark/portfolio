@@ -18,7 +18,7 @@ export const HeroData: HeroDataType = {
   estado: "Open to new opportunities!",
   saludo: "Hello, I'm",
   nombre: "Daniel Amado",
-  perfil: "Fullstack Developer",
+  perfil: "Full Stack Developer",
   LinkedIn: "https://www.linkedin.com/in/danielamadov/",
   GitHub: "https://github.com/TDanyStark",
   CV: "cv/cv_daniel_amado_en.pdf",
