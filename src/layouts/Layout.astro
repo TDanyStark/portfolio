@@ -57,9 +57,9 @@ const { title, lang } = Astro.props;
     <meta name="robots" content="index, follow" />
     <meta name="language" content={lang === "es" ? "Spanish" : "English"} />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZSQT7F4XV"
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-LZSQT7F4XV"
     ></script>
-    <script is:inline>
+    <script is:inline async>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
