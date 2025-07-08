@@ -2,8 +2,9 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
-import critters from "@astrojs/critters"; // 👈 nuevo
+import critters from "astro-critters";
 
+// https://astro.build/config
 export default defineConfig({
   site: 'https://danielamado.com',
   i18n: {
@@ -13,19 +14,14 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
-  integrations: [
-    tailwind(),
-    react(),
-    sitemap({
-      i18n: {
-        defaultLocale: 'es',
-        locales: {
-          es: 'es',
-          en: 'en'
-        }
+  integrations: [tailwind(), react(), sitemap({
+    i18n: {
+      defaultLocale: 'es',
+      locales: {
+        es: 'es',
+        en: 'en'
       }
-    }),
-    critters() // 👈 activas extracción de CSS crítico e inlining
-  ],
+    }
+  }), critters()],
   base: "/"
 });
