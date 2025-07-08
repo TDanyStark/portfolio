@@ -52,7 +52,8 @@ const { title, lang } = Astro.props;
       ? "Desarrollador full Stack con 3 años en IT. Apasionado por el frontend, backend, automatización y AI. Resuelve problemas con soluciones creativas y eficientes."
       : "Full Stack developer with 3 years in IT. Passionate about frontend, backend, automation, and AI. Solves problems with creative and efficient solutions."} />
     <meta name="twitter:image" content={`https://danielamado.com/img/og_daniel_${lang}.jpg`} />
-    
+    <link rel="preload" href="/img/bg.webp" as="image" />
+
     <!-- Additional SEO meta tags -->
     <meta name="robots" content="index, follow" />
     <meta name="language" content={lang === "es" ? "Spanish" : "English"} />
