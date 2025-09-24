@@ -75,7 +75,45 @@ export const ProjectsData: ProjectsDataType = {
   titulo: "Experiencias",
   tituloResaltado: "Significativas",
   parrafo: "Estos son algunos de los proyectos recientes que han sido fundamentales en mi desarrollo profesional y han contribuido significativamente a mi crecimiento en la industria.",
+  cta: "Ver más proyectos",
+  viewless: "Ver menos",
   proyectos: [
+    {
+      img: "img/portafolio/projects/qr2.webp",
+      titulo: "Codigos QR con analítica",
+      descripcion: "Sistema de creación de códigos QR con analítica, permitiendo a los usuarios rastrear el rendimiento de sus códigos en tiempo real.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://qr2.market-support.com/",
+      LinkGithub: "https://github.com/TDanyStark/qr_codes"
+    },
+    {
+      img: "img/portafolio/projects/petrasanta.webp",
+      titulo: "Hotel Petra Santa",
+      descripcion: "Pagina web de la empresa Hotel Petra Santa, con sistema de reservas y pagos en línea.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://hotelpetrasanta.com/"
+    },
+    {
+      img: "img/portafolio/projects/icz.webp",
+      titulo: "Instituto Canzion Colombia",
+      descripcion: "Pagina web de la empresa Instituto Canzion Colombia.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://institutocanzion.com.co/"
+    },
+    {
+      img: "img/portafolio/projects/fcs.webp",
+      titulo: "Focredisocial S.A.S",
+      descripcion: "Pagina web de la empresa Focredisocial S.A.S.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://fcs.com.co/"
+    },
+    {
+      img: "img/portafolio/projects/creditalliance.webp",
+      titulo: "Credit Alliance",
+      descripcion: "Pagina web de la empresa Credit Alliance.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://creditalliancesas.com/"
+    },
     {
       img: "img/portafolio/projects/laberinto.webp",
       titulo: "Laberinto elevando el estándar",
@@ -133,11 +171,32 @@ export const ProjectsData: ProjectsDataType = {
       LinkGithub: "https://github.com/TDanyStark/Mapa-casos-de-dolor/"
     },
     {
+      img: "img/portafolio/projects/elarepazo.webp",
+      titulo: "El Arepazo",
+      descripcion: "Pagina web de la empresa El Arepazo.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://elarepazo.co/",
+    },
+    {
       img: "img/portafolio/projects/market.webp",
       titulo: "Market Support",
       descripcion: "Pagina web de la empresa Market Support (Multilingüe).",
       tecnologias: ["WordPress", "CSS"],
       link: "https://market-support.com",
+    },
+    {
+      img: "img/portafolio/projects/referupproperty.webp",
+      titulo: "Referup Property",
+      descripcion: "Pagina web de la empresa Referup Property.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://referupproperty.com/",
+    },
+    {
+      img: "img/portafolio/projects/bioshine.webp",
+      titulo: "Bioshine Cleaning",
+      descripcion: "Pagina web de la empresa Bioshine Cleaning.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://bioshinecleaning.com/",
     },
     {
       img: "img/portafolio/projects/norat.webp",
@@ -161,13 +220,6 @@ export const ProjectsData: ProjectsDataType = {
       link: "https://bbmproducciones.com.co/",
     },
     {
-      img: "img/portafolio/projects/autoclic.webp",
-      titulo: "Autoclic",
-      descripcion: "Pagina web de la empresa Autoclic.",
-      tecnologias: ["WordPress", "CSS", "PHP"],
-      link: "https://autoclic.com.co/",
-    },
-    {
       img: "img/portafolio/projects/cafecitoconcata.webp",
       titulo: "Cafecito con Cata",
       descripcion: "Pagina web de la empresa cafecito con cata, Woocommerce, learndash, membresías y afiliados, CSS, PHP.",
@@ -186,14 +238,14 @@ export const ProjectsData: ProjectsDataType = {
       titulo: "Hello marketeros",
       descripcion: "Pagina web de la empresa Hello marketeros, Woocommerce, learndash, CSS.",
       tecnologias: ["Woocommerce", "CSS"],
-      link: "https://cursos.market-support.com/",
+      link: "https://hellomarketeros.com/",
     },
     {
-      img: "img/portafolio/projects/enextge.webp",
-      titulo: "e-nextGe",
-      descripcion: "Pagina web de la empresa e-nextGe.",
-      tecnologias: ["Woocommerce", "CSS"],
-      link: "https://e-nextge.com/",
+      img: "img/portafolio/projects/autoclic.webp",
+      titulo: "Autoclic",
+      descripcion: "Pagina web de la empresa Autoclic.",
+      tecnologias: ["WordPress", "CSS", "PHP"],
+      link: "https://autoclic.com.co/",
     },
     {
       img: "img/portafolio/projects/sheetzoom.webp",

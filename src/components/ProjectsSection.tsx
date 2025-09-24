@@ -76,7 +76,7 @@ export default function ProjectsSection({
             <Button 
             onClick={() => setShowAll(true)}
             className="bg-azul-cielo hover:bg-azul-cielo/80 text-white hover:text-white"
-            >Ver más proyectos</Button>
+            >{projectsData.cta}</Button>
           </div>
         )}
 
@@ -90,7 +90,7 @@ export default function ProjectsSection({
               sectionRef.current?.scrollIntoView({ behavior: "smooth" })
             }}
             className="bg-azul-cielo hover:bg-azul-cielo/80 text-white hover:text-white"
-            >Ver menos</Button>
+            >{projectsData.viewless}</Button>
           </div>
         )}
       </div>

@@ -49,6 +49,8 @@ export interface ProjectsDataType {
   titulo: string;
   tituloResaltado: string;
   parrafo: string;
+  cta: string;
+  viewless: string;
   proyectos: ProjectType[];
 }
 

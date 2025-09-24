@@ -74,12 +74,50 @@ export const ProjectsData: ProjectsDataType = {
   etiqueta: "Projects",
   titulo: "Significant",
   tituloResaltado: "Experiences",
+  cta: "View more projects",
+  viewless: "View less",
   parrafo: "These are some of the recent projects that have been fundamental in my professional development and have significantly contributed to my growth in the industry.",
   proyectos: [
     {
+      img: "img/portafolio/projects/qr2.webp",
+      titulo: "QR Codes with Analytics",
+      descripcion: "System for creating QR codes with analytics, allowing users to track the performance of their codes in real time.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://qr2.market-support.com/",
+      LinkGithub: "https://github.com/TDanyStark/qr_codes"
+    },
+    {
+      img: "img/portafolio/projects/petrasanta.webp",
+      titulo: "Hotel Petra Santa",
+      descripcion: "Website for Hotel Petra Santa, with online booking and payment system.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://hotelpetrasanta.com/"
+    },
+    {
+      img: "img/portafolio/projects/icz.webp",
+      titulo: "Instituto Canzion Colombia",
+      descripcion: "Website for Instituto Canzion Colombia.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://institutocanzion.com.co/"
+    },
+    {
+      img: "img/portafolio/projects/fcs.webp",
+      titulo: "Focredisocial S.A.S",
+      descripcion: "Website for Focredisocial S.A.S.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://fcs.com.co/"
+    },
+    {
+      img: "img/portafolio/projects/creditalliance.webp",
+      titulo: "Credit Alliance",
+      descripcion: "Website for Credit Alliance.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://creditalliancesas.com/"
+    },
+    {
       img: "img/portafolio/projects/laberinto.webp",
-      titulo: "Maze: Raising the Bar",
-      descripcion: "An interactive maze where every step depends on your correct answers. Answer all the questions flawlessly to complete the challenge and trigger a lively confetti celebration.",
+      titulo: "Maze Raising the Standard",
+      descripcion: "Interactive maze where each step depends on your correct answers. Answer all questions without mistakes to complete the challenge and trigger a lively confetti celebration.",
       tecnologias: ["Astro JS", "React", "Tailwind"],
       link: "https://market-support.com/apps/abbott/laberinto-klaricid/",
       LinkGithub: "https://github.com/TDanyStark/laberinto-klaricid/"
@@ -87,39 +125,39 @@ export const ProjectsData: ProjectsDataType = {
     {
       img: "img/portafolio/projects/calculadora.webp",
       titulo: "TiroCare Control",
-      descripcion: "Dose calculator for a medication for patients with hypothyroidism.",
+      descripcion: "Dosage calculator for a medication used by patients with hypothyroidism.",
       tecnologias: ["Astro JS", "React", "Tailwind"],
       link: "https://market-support.com/apps/abbott/tirocare-control/",
       LinkGithub: "https://github.com/TDanyStark/tirocare-control/"
     },
     {
       img: "img/portafolio/projects/elmetodo.webp",
-      titulo: "The most reliable method is your knowledge",
-      descripcion: "This application aims to test and increase the knowledge that university students have about different contraceptive methods.",
+      titulo: "The Most Reliable Method is Your Knowledge",
+      descripcion: "This app aims to test and expand university students' knowledge about different contraceptive methods.",
       tecnologias: ["Astro JS", "React", "Tailwind"],
       link: "https://market-support.com/apps/abbott/el-metodo-mas-confiable/",
       LinkGithub: "https://github.com/TDanyStark/el-metodo-mas-confiable-es-tu-conocimiento/"
     },
     {
       img: "img/portafolio/projects/quetantoconosex.webp",
-      titulo: "How much do you know?",
-      descripcion: "This application aims to promote, in a playful way, key knowledge about sexual and reproductive health.",
+      titulo: "How Much Do You Know?",
+      descripcion: "This app aims to promote, in a playful way, key knowledge about sexual and reproductive health.",
       tecnologias: ["Astro JS", "HTML", "CSS", "JS", "Tailwind"],
       link: "https://market-support.com/apps/abbott/que-tanto-conosex/",
       LinkGithub: "https://github.com/TDanyStark/app-que-tanto-conosex/"
     },
     {
       img: "img/portafolio/projects/mandalas.webp",
-      titulo: "Painting Mandalas",
-      descripcion: "This application aims to invite patients to relax and reduce stress by painting mandalas.",
+      titulo: "Mandala Painting",
+      descripcion: "This app is designed to invite patients to relax and reduce stress through mandala painting.",
       tecnologias: ["Astro JS", "HTML", "JS", "Tailwind"],
       link: "https://market-support.com/apps/abbott/mandalas-emocionales/",
       LinkGithub: "https://github.com/TDanyStark/pintar-mandalas/"
     },
     {
       img: "img/portafolio/projects/album_sii.webp",
-      titulo: "Album SII",
-      descripcion: "This application aims to allow users to complete their album taking into account the type of patient and the correct treatment.",
+      titulo: "SII Album",
+      descripcion: "This app allows users to complete their album based on the type of patient and the correct treatment.",
       tecnologias: ["PHP", "HTML", "JS", "CSS", "MYSQL"],
       link: "https://market-support.com/apps/album_sii_bloqued/login",
       LinkGithub: "https://github.com/TDanyStark/album_sii/"
@@ -127,87 +165,102 @@ export const ProjectsData: ProjectsDataType = {
     {
       img: "img/portafolio/projects/mapadolor.webp",
       titulo: "Interactive Pain Map",
-      descripcion: "This application aims to measure a patient's pain threshold.",
+      descripcion: "This app is designed to measure a patient's pain threshold.",
       tecnologias: ["HTML", "JS", "CSS"],
       link: "https://market-support.com/apps/mapa-interactivo-dolor/",
       LinkGithub: "https://github.com/TDanyStark/Mapa-casos-de-dolor/"
     },
     {
+      img: "img/portafolio/projects/elarepazo.webp",
+      titulo: "El Arepazo",
+      descripcion: "Website for El Arepazo.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://elarepazo.co/"
+    },
+    {
       img: "img/portafolio/projects/market.webp",
       titulo: "Market Support",
-      descripcion: "Website of the company Market Support.",
+      descripcion: "Website for Market Support (Multilingual).",
       tecnologias: ["WordPress", "CSS"],
-      link: "https://market-support.com",
+      link: "https://market-support.com"
+    },
+    {
+      img: "img/portafolio/projects/referupproperty.webp",
+      titulo: "Referup Property",
+      descripcion: "Website for Referup Property.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://referupproperty.com/"
+    },
+    {
+      img: "img/portafolio/projects/bioshine.webp",
+      titulo: "Bioshine Cleaning",
+      descripcion: "Website for Bioshine Cleaning.",
+      tecnologias: ["WordPress", "CSS"],
+      link: "https://bioshinecleaning.com/"
     },
     {
       img: "img/portafolio/projects/norat.webp",
-      titulo: "Norat Spa",
-      descripcion: "Website for the company Norat Spa.",
+      titulo: "Spa Norat",
+      descripcion: "Website for Spa Norat.",
       tecnologias: ["WordPress", "Elementor", "CSS"],
-      link: "https://spanorat.com/inicio/",
+      link: "https://spanorat.com/inicio/"
     },
     {
       img: "img/portafolio/projects/ctoxlabs.webp",
       titulo: "CTOxLabs",
-      descripcion: "Multilingual website for the company CTOxLabs.",
+      descripcion: "Website for CTOxLabs (Multilingual).",
       tecnologias: ["WordPress", "Elementor", "CSS"],
-      link: "https://ctoxlabs.com/es-es/inicio/",
-    },    
+      link: "https://ctoxlabs.com/es-es/inicio/"
+    },
     {
       img: "img/portafolio/projects/bbm.webp",
       titulo: "BBM Productions",
-      descripcion: "Website of the company BBM Productions.",
+      descripcion: "Website for BBM Productions.",
       tecnologias: ["WordPress", "CSS"],
-      link: "https://bbmproducciones.com.co/",
-    },
-    {
-      img: "img/portafolio/projects/autoclic.webp",
-      titulo: "Autoclic",
-      descripcion: "Website of the company Autoclic.",
-      tecnologias: ["WordPress", "CSS", "PHP"],
-      link: "https://autoclic.com.co/",
+      link: "https://bbmproducciones.com.co/"
     },
     {
       img: "img/portafolio/projects/cafecitoconcata.webp",
       titulo: "Cafecito con Cata",
-      descripcion: "Website of the company Cafecito con Cata, Woocommerce, learndash, memberships, and affiliates, CSS, PHP.",
+      descripcion: "Website for Cafecito con Cata, featuring Woocommerce, LearnDash, memberships, affiliates, CSS, and PHP.",
       tecnologias: ["Woocommerce", "CSS", "PHP"],
-      link: "https://cafecitoconcata.com/",
+      link: "https://cafecitoconcata.com/"
     },
     {
       img: "img/portafolio/projects/equipomas.webp",
       titulo: "Equipo MAS",
-      descripcion: "Website of the company Equipo MAS, Woocommerce, learndash, memberships, CSS, PHP.",
+      descripcion: "Website for Equipo MAS, featuring Woocommerce, LearnDash, memberships, CSS, and PHP.",
       tecnologias: ["Woocommerce", "CSS", "PHP"],
-      link: "https://equipomas.com/",
+      link: "https://equipomas.com/"
     },
     {
       img: "img/portafolio/projects/hellomarketeros.webp",
       titulo: "Hello Marketeros",
-      descripcion: "Website of the company Hello Marketeros, Woocommerce, learndash, CSS.",
+      descripcion: "Website for Hello Marketeros, featuring Woocommerce, LearnDash, and CSS.",
       tecnologias: ["Woocommerce", "CSS"],
-      link: "https://cursos.market-support.com/",
+      link: "https://hellomarketeros.com/"
     },
     {
-      img: "img/portafolio/projects/enextge.webp",
-      titulo: "e-nextGe",
-      descripcion: "Website of the company e-nextGe.",
-      tecnologias: ["Woocommerce", "CSS"],
-      link: "https://e-nextge.com/",
+      img: "img/portafolio/projects/autoclic.webp",
+      titulo: "Autoclic",
+      descripcion: "Website for Autoclic.",
+      tecnologias: ["WordPress", "CSS", "PHP"],
+      link: "https://autoclic.com.co/"
     },
     {
       img: "img/portafolio/projects/sheetzoom.webp",
       titulo: "Webinar Creator and Automation",
-      descripcion: "System to create webinars on Zoom automatically with a single click, sending links in HTML format, sending reports, etc.",
-      tecnologias: ["GAS", "Google sheets"],
+      descripcion: "System to create Zoom webinars automatically with one click, send links in HTML format, send reports, etc.",
+      tecnologias: ["GAS", "Google sheets"]
     },
     {
       img: "img/portafolio/projects/enviomails.webp",
       titulo: "Email Marketing with Sheets and GAS",
-      descripcion: "Script to do email marketing to 1500 emails per day.",
-      tecnologias: ["GAS", "Google sheets"],
+      descripcion: "Script to perform email marketing to 1500 emails per day.",
+      tecnologias: ["GAS", "Google sheets"]
     },
   ],
+  
 }
 
 export const SkillsData: SkillsDataType = {
