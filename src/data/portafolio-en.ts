@@ -382,7 +382,7 @@ export const TestimonialsData: TestimonialsDataType = {
       nombre: "Sandy Baron",
       cargo: "CEO",
       empresa: "Market Support",
-      comentario: "Daniel is an excellent professional, always willing to help and provide creative solutions to problems. His knowledge in frontend is impressive, and his ability to work in a team is exceptional.",
+      comentario: "Daniel is an excellent professional, always willing to help and provide creative solutions to problems. His ability to work in a team is exceptional.",
       img: "img/portafolio/testimonials/sandy.webp",
       linkLinkedIn: "https://www.linkedin.com/in/sandy-barón-701a4a129/"
     }
